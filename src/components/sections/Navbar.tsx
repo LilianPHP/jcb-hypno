@@ -28,12 +28,9 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex flex-col leading-tight">
+        <a href="#" className="flex items-center leading-tight">
           <span className={`font-serif text-base font-bold transition-colors ${scrolled ? 'text-slate-900' : 'text-white'}`}>
             Jean-Charles Bernard
-          </span>
-          <span className={`text-[10px] tracking-widest uppercase transition-colors ${scrolled ? 'text-indigo-600' : 'text-indigo-300'}`}>
-            Hypnothérapeute · Paris & Boussy
           </span>
         </a>
 

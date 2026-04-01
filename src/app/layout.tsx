@@ -18,6 +18,12 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" },
+    ],
+  },
   title: "Jean-Charles Bernard — Hypnothérapeute | Paris & Boussy-Saint-Antoine",
   description:
     "Jean-Charles Bernard, hypnothérapeute diplômé IFHE à Paris 7ème et Boussy-Saint-Antoine. Hypnose Ericksonienne, Humaniste, RITMO®, PNL. 15 ans d'expérience. 70€/séance.",
