@@ -1,7 +1,8 @@
 'use client';
 import FadeContent from '@/components/effects/FadeContent';
 import Magnet from '@/components/effects/Magnet';
-import { Phone, Mail, MapPin, Clock, ExternalLink, Calendar } from 'lucide-react';
+import CalendlyButton from '@/components/ui/CalendlyButton';
+import { Phone, Mail, MapPin, Clock, ExternalLink } from 'lucide-react';
 
 const cabinets = [
   {
@@ -82,15 +83,7 @@ export default function ContactSection() {
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Magnet strength={30}>
-                    <a
-                      href="https://www.pagesjaunes.fr/pros/55730097#calendrier"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 bg-white text-indigo-700 font-bold px-6 py-3.5 rounded-full hover:bg-indigo-50 transition-colors shadow-lg cursor-pointer w-full sm:w-auto"
-                    >
-                      <Calendar size={16} />
-                      Réserver en ligne
-                    </a>
+                    <CalendlyButton className="inline-flex items-center justify-center gap-2 bg-white text-indigo-700 font-bold px-6 py-3.5 rounded-full hover:bg-indigo-50 transition-colors shadow-lg cursor-pointer w-full sm:w-auto" />
                   </Magnet>
                   <a
                     href="tel:+33660811295"
@@ -100,6 +93,17 @@ export default function ContactSection() {
                     Appeler
                   </a>
                 </div>
+                <p className="text-white/30 text-xs mt-4">
+                  Aussi disponible sur{' '}
+                  <a
+                    href="https://www.pagesjaunes.fr/pros/55730097#calendrier"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-white/50 transition-colors"
+                  >
+                    Pages Jaunes
+                  </a>
+                </p>
               </div>
             </div>
           </FadeContent>
