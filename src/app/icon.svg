@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Fond noir -->
+  <rect width="32" height="32" fill="#0a0a0a"/>
+
+  <!-- Ligne supérieure -->
+  <rect x="6" y="8" width="20" height="0.75" fill="white" opacity="0.55"/>
+
+  <!-- Initiales JCB -->
+  <text
+    x="16"
+    y="21"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="10"
+    font-weight="700"
+    fill="white"
+    text-anchor="middle"
+    letter-spacing="1.5"
+  >JCB</text>
+
+  <!-- Ligne inférieure -->
+  <rect x="6" y="24.5" width="20" height="0.75" fill="white" opacity="0.55"/>
+</svg>
