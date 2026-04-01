@@ -81,7 +81,7 @@ export default function AboutSection() {
                 06 60 81 12 95
               </a>
               <a
-                href="https://hypnose-liveyourdreams.fr"
+                href="https://jean-charles-bernard.fr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 border border-slate-200 text-slate-700 font-semibold px-5 py-2.5 rounded-full hover:border-indigo-300 transition-colors text-sm"

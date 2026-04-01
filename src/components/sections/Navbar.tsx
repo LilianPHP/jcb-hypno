@@ -33,7 +33,7 @@ export default function Navbar() {
             Jean-Charles Bernard
           </span>
           <span className={`text-[10px] tracking-widest uppercase transition-colors ${scrolled ? 'text-indigo-600' : 'text-indigo-300'}`}>
-            Hypnose · Live Your Dreams
+            Hypnothérapeute · Paris & Boussy
           </span>
         </a>
 

@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <span className="font-serif text-lg font-bold text-white block">Jean-Charles Bernard</span>
-              <span className="text-indigo-400 text-xs tracking-widest uppercase">Hypnose · Live Your Dreams</span>
+              <span className="text-indigo-400 text-xs tracking-widest uppercase">Hypnothérapeute · Paris & Boussy</span>
             </div>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
               Hypnothérapeute diplômé IFHE. 15 ans d'expérience au service de votre mieux-être,
