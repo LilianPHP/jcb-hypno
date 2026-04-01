@@ -20,8 +20,6 @@ export default function HeroSection() {
       {/* Indigo gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-950/70 via-transparent to-indigo-900/40" />
 
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-50 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-20 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left — text */}
