@@ -24,7 +24,7 @@ export default function AboutSection() {
               {/* Photo */}
               <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4] bg-indigo-100">
                 <img
-                  src="/images/photo bureau.jpg"
+                  src="/images/photo_bureau.jpg"
                   alt="Cabinet de Jean-Charles Bernard"
                   className="w-full h-full object-cover"
                   onError={(e) => {
