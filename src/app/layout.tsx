@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Lora, Raleway } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
+import { GA4_MEASUREMENT_ID } from "@/lib/analytics";
 
 const lora = Lora({
   variable: "--font-lora",
@@ -36,6 +38,9 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     type: "website",
   },
+  verification: {
+    google: "FTU9fIcghqrciasTsOGAy1Zfnl5wFDkiZ2o_7Eys1BE",
+  },
 };
 
 export default function RootLayout({
@@ -51,6 +56,24 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-[#F8F7FF] text-[#1E1B4B]">
         {children}
+
+        {/* Google Analytics 4 — loaded after page is interactive so it
+            doesn't block first paint or LCP. */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', '${GA4_MEASUREMENT_ID}', {
+              anonymize_ip: true,
+            });
+          `}
+        </Script>
       </body>
     </html>
   );

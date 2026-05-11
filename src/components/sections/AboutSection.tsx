@@ -1,6 +1,7 @@
 'use client';
 import FadeContent from '@/components/effects/FadeContent';
 import { CheckCircle2, Quote } from 'lucide-react';
+import { trackPhoneClick } from '@/lib/analytics';
 
 const certifications = [
   'Maître Praticien Hypnose Ericksonienne & PNL — IFHE (2005/2007)',
@@ -76,6 +77,7 @@ export default function AboutSection() {
             <div className="mt-8 flex gap-4">
               <a
                 href="tel:+33660811295"
+                onClick={() => trackPhoneClick('about_section')}
                 className="flex items-center gap-2 bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-full hover:bg-indigo-700 transition-colors text-sm"
               >
                 06 60 81 12 95

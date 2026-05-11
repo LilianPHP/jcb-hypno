@@ -1,9 +1,7 @@
 'use client';
 import { useEffect } from 'react';
 import { Calendar } from 'lucide-react';
-
-// ⚠️ Remplacer par le vrai lien Calendly de Jean-Charles
-const CALENDLY_URL = 'https://calendly.com/jean-charles-bernard/seance-1h';
+import { buildCalendlyUrl, trackCalendlyOpen } from '@/lib/analytics';
 
 declare global {
   interface Window {
@@ -13,7 +11,22 @@ declare global {
   }
 }
 
-export default function CalendlyButton({ className }: { className?: string }) {
+interface CalendlyButtonProps {
+  className?: string;
+  /**
+   * Where on the page this button sits (e.g. "navbar", "hero", "contact_section").
+   * Passed as utm_content to Calendly + as the GA4 event location so we can
+   * see which CTA position drives bookings.
+   */
+  location?: string;
+  children?: React.ReactNode;
+}
+
+export default function CalendlyButton({
+  className,
+  location = 'unknown',
+  children,
+}: CalendlyButtonProps) {
   useEffect(() => {
     if (document.getElementById('calendly-script')) return;
     const script = document.createElement('script');
@@ -29,13 +42,18 @@ export default function CalendlyButton({ className }: { className?: string }) {
   }, []);
 
   const openCalendly = () => {
-    window.Calendly?.initPopupWidget({ url: CALENDLY_URL });
+    trackCalendlyOpen(location);
+    window.Calendly?.initPopupWidget({ url: buildCalendlyUrl(location) });
   };
 
   return (
     <button onClick={openCalendly} className={className}>
-      <Calendar size={16} />
-      Réserver en ligne
+      {children ?? (
+        <>
+          <Calendar size={16} />
+          Réserver en ligne
+        </>
+      )}
     </button>
   );
 }

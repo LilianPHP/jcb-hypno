@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import Magnet from '@/components/effects/Magnet';
+import { trackPhoneClick } from '@/lib/analytics';
 
 const links = [
   { label: 'Mon approche', href: '#approche' },
@@ -52,6 +53,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <a
             href="tel:+33660811295"
+            onClick={() => trackPhoneClick('navbar')}
             className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${scrolled ? 'text-slate-600' : 'text-white/80'} hover:text-indigo-500`}
           >
             <Phone size={14} />

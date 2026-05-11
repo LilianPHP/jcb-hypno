@@ -3,6 +3,7 @@ import FadeContent from '@/components/effects/FadeContent';
 import Magnet from '@/components/effects/Magnet';
 import CalendlyButton from '@/components/ui/CalendlyButton';
 import { Phone, Mail, MapPin, Clock, ExternalLink } from 'lucide-react';
+import { trackPhoneClick, trackEmailClick, trackExternalBookingClick } from '@/lib/analytics';
 
 const cabinets = [
   {
@@ -60,6 +61,7 @@ export default function ContactSection() {
                 <Phone size={18} className="text-indigo-300" />
                 <a
                   href="tel:+33660811295"
+                  onClick={() => trackPhoneClick('contact_section_card')}
                   className="font-semibold text-white text-lg hover:text-indigo-200 transition-colors cursor-pointer"
                 >
                   06 60 81 12 95
@@ -69,6 +71,7 @@ export default function ContactSection() {
                 <Mail size={18} className="text-indigo-300" />
                 <a
                   href="mailto:jeancharlesbernard3@gmail.com"
+                  onClick={() => trackEmailClick('contact_section_card')}
                   className="text-white hover:text-indigo-200 transition-colors cursor-pointer"
                 >
                   jeancharlesbernard3@gmail.com
@@ -83,10 +86,14 @@ export default function ContactSection() {
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Magnet strength={30}>
-                    <CalendlyButton className="inline-flex items-center justify-center gap-2 bg-white text-indigo-700 font-bold px-6 py-3.5 rounded-full hover:bg-indigo-50 transition-colors shadow-lg cursor-pointer w-full sm:w-auto" />
+                    <CalendlyButton
+                      location="contact_section"
+                      className="inline-flex items-center justify-center gap-2 bg-white text-indigo-700 font-bold px-6 py-3.5 rounded-full hover:bg-indigo-50 transition-colors shadow-lg cursor-pointer w-full sm:w-auto"
+                    />
                   </Magnet>
                   <a
                     href="tel:+33660811295"
+                    onClick={() => trackPhoneClick('contact_section')}
                     className="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/30 text-white font-semibold px-6 py-3.5 rounded-full hover:bg-white/20 transition-colors backdrop-blur-sm cursor-pointer"
                   >
                     <Phone size={16} />
@@ -99,6 +106,7 @@ export default function ContactSection() {
                     href="https://www.pagesjaunes.fr/pros/55730097#calendrier"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackExternalBookingClick('pagesjaunes', 'contact_section')}
                     className="underline hover:text-white/50 transition-colors"
                   >
                     Pages Jaunes
