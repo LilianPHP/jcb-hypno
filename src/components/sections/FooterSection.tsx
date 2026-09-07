@@ -3,11 +3,18 @@ import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import { trackPhoneClick, trackExternalBookingClick } from '@/lib/analytics';
 
 const links = [
-  { label: 'Mon approche', href: '#approche' },
-  { label: 'Séances & tarifs', href: '#services' },
-  { label: 'Témoignages', href: '#temoignages' },
-  { label: 'À propos', href: '#about' },
-  { label: 'Prendre RDV', href: '#rdv' },
+  { label: 'Mon approche', href: '/#approche' },
+  { label: 'Séances & tarifs', href: '/#services' },
+  { label: 'Témoignages', href: '/#temoignages' },
+  { label: 'À propos', href: '/#about' },
+  { label: 'Prendre RDV', href: '/#rdv' },
+];
+
+const specialites = [
+  { label: 'Arrêt du tabac', href: '/arret-tabac' },
+  { label: 'Stress & anxiété', href: '/stress-anxiete' },
+  { label: 'Poids & alimentation', href: '/poids-alimentation' },
+  { label: 'Sommeil & insomnie', href: '/sommeil-insomnie' },
 ];
 
 export default function FooterSection() {
@@ -40,6 +47,15 @@ export default function FooterSection() {
               {links.map(l => (
                 <li key={l.href}>
                   <a href={l.href} className="text-sm hover:text-indigo-400 transition-colors">{l.label}</a>
+                </li>
+              ))}
+            </ul>
+
+            <div className="text-white text-sm font-semibold mt-8 mb-4 uppercase tracking-wider">Spécialités</div>
+            <ul className="space-y-2">
+              {specialites.map(s => (
+                <li key={s.href}>
+                  <a href={s.href} className="text-sm hover:text-indigo-400 transition-colors">{s.label}</a>
                 </li>
               ))}
             </ul>
@@ -81,15 +97,17 @@ export default function FooterSection() {
 
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/30">
           <span>© {new Date().getFullYear()} Jean-Charles Bernard · Tous droits réservés</span>
-          <a
-            href="https://hypnose-liveyourdreams.fr"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackExternalBookingClick('other', 'footer_bottom')}
-            className="hover:text-white/60 transition-colors"
-          >
-            hypnose-liveyourdreams.fr
-          </a>
+          <span>
+            Site web créé avec ❤️ par{' '}
+            <a
+              href="https://webmate.digital"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-400 hover:text-indigo-300 transition-colors"
+            >
+              webmate.digital
+            </a>
+          </span>
         </div>
       </div>
     </footer>

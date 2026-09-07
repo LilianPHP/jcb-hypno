@@ -1,6 +1,33 @@
 'use client';
 import FadeContent from '@/components/effects/FadeContent';
-import { MessageSquare, Heart, Clock, Activity, Coffee, Sparkles } from 'lucide-react';
+import { MessageSquare, Heart, Clock, Activity, Coffee, Sparkles, Cigarette, Brain, Utensils, Moon, ArrowRight } from 'lucide-react';
+
+const motifs = [
+  {
+    icon: Cigarette,
+    title: 'Arrêt du tabac',
+    desc: 'Se libérer définitivement de la cigarette, sans substitut ni prise de poids.',
+    href: '/arret-tabac',
+  },
+  {
+    icon: Brain,
+    title: 'Stress & anxiété',
+    desc: 'Apaiser un mental qui ne s\'arrête jamais et retrouver un calme durable.',
+    href: '/stress-anxiete',
+  },
+  {
+    icon: Utensils,
+    title: 'Poids & alimentation',
+    desc: 'Sortir du grignotage et des compulsions, sans régime ni privation.',
+    href: '/poids-alimentation',
+  },
+  {
+    icon: Moon,
+    title: 'Sommeil & insomnie',
+    desc: 'Retrouver l\'endormissement et des nuits enfin réparatrices.',
+    href: '/sommeil-insomnie',
+  },
+];
 
 const services = [
   {
@@ -76,6 +103,43 @@ export default function ServicesSection() {
               </div>
             </FadeContent>
           ))}
+        </div>
+
+        {/* Motifs de consultation */}
+        <div className="mt-20">
+          <FadeContent>
+            <div className="text-center mb-10">
+              <span className="text-indigo-600 text-xs font-bold uppercase tracking-widest">Motifs de consultation</span>
+              <h3 className="font-serif text-3xl lg:text-4xl font-bold text-slate-900 mt-3 mb-4">
+                Pour quoi consulter&nbsp;?
+              </h3>
+              <p className="text-slate-500 max-w-2xl mx-auto leading-relaxed">
+                Les quatre demandes les plus fréquentes au cabinet. Chacune a sa page dédiée,
+                avec le déroulé de la séance et les réponses aux questions les plus posées.
+              </p>
+            </div>
+          </FadeContent>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {motifs.map((m, i) => (
+              <FadeContent key={m.href} delay={i * 0.1}>
+                <a
+                  href={m.href}
+                  className="group h-full bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-200 transition-all duration-300 flex flex-col"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center mb-5 group-hover:bg-indigo-100 transition-colors">
+                    <m.icon size={22} className="text-indigo-600" />
+                  </div>
+                  <h4 className="font-serif text-lg font-bold text-slate-900 mb-2">{m.title}</h4>
+                  <p className="text-slate-500 text-sm leading-relaxed flex-1">{m.desc}</p>
+                  <span className="mt-5 pt-4 border-t border-slate-100 inline-flex items-center gap-1.5 text-indigo-600 text-sm font-semibold">
+                    En savoir plus
+                    <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                  </span>
+                </a>
+              </FadeContent>
+            ))}
+          </div>
         </div>
       </div>
     </section>
