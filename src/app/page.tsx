@@ -4,8 +4,8 @@ import ProblemsSection from '@/components/sections/ProblemsSection';
 import ServicesSection from '@/components/sections/ServicesSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import AboutSection from '@/components/sections/AboutSection';
-import ContactSection from '@/components/sections/ContactSection';
-import Footer from '@/components/sections/Footer';
+import BookingSection from '@/components/sections/BookingSection';
+import FooterSection from '@/components/sections/FooterSection';
 
 export default function Home() {
   return (
@@ -17,9 +17,9 @@ export default function Home() {
         <ServicesSection />
         <TestimonialsSection />
         <AboutSection />
-        <ContactSection />
+        <BookingSection />
       </main>
-      <Footer />
+      <FooterSection />
     </>
   );
 }
