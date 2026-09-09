@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://jean-charles-bernard.fr'),
   alternates: { canonical: '/stress-anxiete' },
   title: 'Hypnose contre le stress et l\'anxiété à Boussy-Saint-Antoine | Jean-Charles Bernard',
-  description: 'Libérez-vous du stress chronique et de l\'anxiété grâce à l\'hypnose à Boussy-Saint-Antoine (91). Jean-Charles Bernard, hypnothérapeute certifié IFHE. 1h · 70€.',
+  description: 'Libérez-vous du stress chronique et de l\'anxiété grâce à l\'hypnose à Boussy-Saint-Antoine (91). Jean-Charles Bernard, hypnothérapeute certifié IFHE. 1h · 80€.',
   keywords: [
     'hypnose stress anxiété Boussy-Saint-Antoine',
     'hypnothérapeute anxiété 91',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Hypnose contre le stress et l\'anxiété — Boussy-Saint-Antoine',
-    description: 'Hypnothérapeute certifié IFHE · Stress, anxiété, burn-out · 70€ · Boussy-Saint-Antoine (91)',
+    description: 'Hypnothérapeute certifié IFHE · Stress, anxiété, burn-out · 80€ · Boussy-Saint-Antoine (91)',
     locale: 'fr_FR',
     type: 'website',
   },
@@ -124,7 +124,7 @@ export default function StressAnxietePage() {
               </h1>
               <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
                 Jean-Charles Bernard, hypnothérapeute certifié IFHE à Boussy-Saint-Antoine,
-                vous aide à retrouver un calme durable. <strong className="text-white">1h · 70€ · Résultats dès la 1ère séance.</strong>
+                vous aide à retrouver un calme durable. <strong className="text-white">1h · 80€ · Résultats dès la 1ère séance.</strong>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -133,7 +133,7 @@ export default function StressAnxietePage() {
                   rel="noopener noreferrer"
                   className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-4 rounded-full transition-colors text-base"
                 >
-                  Réserver ma séance — 70€
+                  Réserver ma séance — 80€
                 </a>
                 <a
                   href="tel:+33660811295"
@@ -220,7 +220,7 @@ export default function StressAnxietePage() {
               <div className="text-center mb-14">
                 <span className="text-indigo-500 text-xs font-bold uppercase tracking-widest">Déroulé</span>
                 <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1E1B4B] mt-3">
-                  La séance hypnose stress & anxiété (1h · 70€)
+                  La séance hypnose stress & anxiété (1h · 80€)
                 </h2>
               </div>
             </FadeContent>
@@ -320,7 +320,7 @@ export default function StressAnxietePage() {
                 Prêt à retrouver la sérénité ?
               </h2>
               <p className="text-indigo-200 text-lg mb-8">
-                Réservez votre séance. 1h · 70€ · Au cabinet de Boussy-Saint-Antoine ou à distance.
+                Réservez votre séance. 1h · 80€ · Au cabinet de Boussy-Saint-Antoine ou à distance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -329,7 +329,7 @@ export default function StressAnxietePage() {
                   rel="noopener noreferrer"
                   className="bg-white hover:bg-indigo-50 text-indigo-700 font-semibold px-8 py-4 rounded-full transition-colors text-base"
                 >
-                  Réserver en ligne — 70€
+                  Réserver en ligne — 80€
                 </a>
                 <a
                   href="tel:+33660811295"
@@ -357,7 +357,7 @@ export default function StressAnxietePage() {
           "url": "https://jean-charles-bernard.fr/stress-anxiete",
           "telephone": "+33660811295",
           "email": "jeancharlesbernard3@gmail.com",
-          "priceRange": "70€",
+          "priceRange": "80€",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "4 Allée Les Marronniers",

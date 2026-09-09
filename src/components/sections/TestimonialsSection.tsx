@@ -53,7 +53,7 @@ const stats = [
   { value: 15, suffix: '+', label: 'ans de pratique' },
   { value: 6, suffix: '', label: 'méthodes maîtrisées' },
   { value: 38, suffix: '', label: 'avis 5 étoiles' },
-  { value: 70, suffix: '€', label: 'la séance de 1h' },
+  { value: 80, suffix: '€', label: 'la séance de 1h' },
 ];
 
 export default function TestimonialsSection() {

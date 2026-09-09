@@ -34,7 +34,7 @@ export default function BookingSection() {
               Réservez votre séance
             </h2>
             <p className="text-white/60 text-lg max-w-xl mx-auto">
-              Choisissez un créneau directement en ligne. Première séance d'1h à 70€,
+              Choisissez un créneau directement en ligne. Première séance d'1h à 80€,
               au cabinet ou à distance.
             </p>
           </div>

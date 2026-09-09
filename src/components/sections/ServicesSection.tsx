@@ -34,37 +34,37 @@ const services = [
     icon: MessageSquare,
     title: 'Hypnose Ericksonienne',
     desc: 'Inspirée du psychiatre Milton Erickson, cette technique utilise l\'art du langage et une communication multi-niveaux pour accéder à l\'inconscient.',
-    badge: '1h · 70€',
+    badge: '1h · 80€',
   },
   {
     icon: Heart,
     title: 'Hypnose Humaniste',
     desc: 'Traite les troubles psychologiques et physiologiques par la Conscience. Elle cherche à réunifier la personne en elle-même, corps et esprit.',
-    badge: '1h · 70€',
+    badge: '1h · 80€',
   },
   {
     icon: Clock,
     title: 'Hypnose Classique',
     desc: 'L\'approche originelle, avec suggestions directes. Également pratiquée en hypnose de spectacle — une spécialité unique de Jean-Charles.',
-    badge: '1h · 70€',
+    badge: '1h · 80€',
   },
   {
     icon: Activity,
     title: 'PNL',
     desc: 'La Programmation Neuro-Linguistique agit sur les schémas de pensée et de comportement pour créer des changements durables et positifs.',
-    badge: '1h · 70€',
+    badge: '1h · 80€',
   },
   {
     icon: Coffee,
     title: 'Spécialisation Addictions',
     desc: 'Protocoles spécifiques pour l\'arrêt du tabac et la gestion des comportements addictifs. Certifié IFHE en hypnose et addictions (2025).',
-    badge: '1h · 70€',
+    badge: '1h · 80€',
   },
   {
     icon: Sparkles,
     title: 'RITMO®',
     desc: 'Retraitement de l\'Information Traumatique par les Mouvements Oculaires. Stimulations visuelles et corporelles, inspiré de l\'EMDR. Certifié Lili Ruggieri (2025).',
-    badge: '1h · 70€',
+    badge: '1h · 80€',
   },
 ];
 

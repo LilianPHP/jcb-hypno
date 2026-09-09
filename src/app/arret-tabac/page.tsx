@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://jean-charles-bernard.fr'),
   alternates: { canonical: '/arret-tabac' },
   title: 'Arrêter de fumer grâce à l\'hypnose à Boussy-Saint-Antoine | Jean-Charles Bernard',
-  description: 'Jean-Charles Bernard, hypnothérapeute certifié IFHE à Boussy-Saint-Antoine (91), vous accompagne pour arrêter de fumer par hypnose. 1 séance · 70€ · Résultats durables.',
+  description: 'Jean-Charles Bernard, hypnothérapeute certifié IFHE à Boussy-Saint-Antoine (91), vous accompagne pour arrêter de fumer par hypnose. 1 séance · 80€ · Résultats durables.',
   keywords: [
     'hypnose arrêt tabac Boussy-Saint-Antoine',
     'arrêter de fumer hypnose 91',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Arrêter de fumer par hypnose — Boussy-Saint-Antoine',
-    description: 'Hypnothérapeute certifié IFHE · Arrêt du tabac en 1 séance · 70€ · Boussy-Saint-Antoine (91)',
+    description: 'Hypnothérapeute certifié IFHE · Arrêt du tabac en 1 séance · 80€ · Boussy-Saint-Antoine (91)',
     locale: 'fr_FR',
     type: 'website',
   },
@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     q: 'Quel est le tarif d\'une séance d\'hypnose pour arrêter de fumer ?',
-    a: 'La séance dure 1h et est facturée 70€. Elle inclut un entretien préalable pour comprendre votre motivation et votre historique tabagique, suivi de la séance d\'hypnose proprement dite. Aucun abonnement, aucune surprise.',
+    a: 'La séance dure 1h et est facturée 80€. Elle inclut un entretien préalable pour comprendre votre motivation et votre historique tabagique, suivi de la séance d\'hypnose proprement dite. Aucun abonnement, aucune surprise.',
   },
   {
     q: 'L\'hypnose pour arrêter de fumer est-elle remboursée ?',
@@ -113,7 +113,7 @@ export default function ArretTabacPage() {
               </h1>
               <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
                 Jean-Charles Bernard, hypnothérapeute certifié IFHE, vous accompagne pour
-                vous libérer définitivement du tabac. <strong className="text-white">1 séance · 70€ · Résultats durables.</strong>
+                vous libérer définitivement du tabac. <strong className="text-white">1 séance · 80€ · Résultats durables.</strong>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -122,7 +122,7 @@ export default function ArretTabacPage() {
                   rel="noopener noreferrer"
                   className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-4 rounded-full transition-colors text-base"
                 >
-                  Réserver ma séance — 70€
+                  Réserver ma séance — 80€
                 </a>
                 <a
                   href="tel:+33660811295"
@@ -195,7 +195,7 @@ export default function ArretTabacPage() {
               <div className="text-center mb-14">
                 <span className="text-indigo-500 text-xs font-bold uppercase tracking-widest">Déroulé</span>
                 <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1E1B4B] mt-3 mb-4">
-                  La séance d'hypnose arrêt tabac (1h · 70€)
+                  La séance d'hypnose arrêt tabac (1h · 80€)
                 </h2>
               </div>
             </FadeContent>
@@ -295,7 +295,7 @@ export default function ArretTabacPage() {
                 Prêt à vous libérer du tabac ?
               </h2>
               <p className="text-indigo-200 text-lg mb-8">
-                Réservez votre séance en ligne. 1h · 70€ · Au cabinet de Boussy-Saint-Antoine ou à distance.
+                Réservez votre séance en ligne. 1h · 80€ · Au cabinet de Boussy-Saint-Antoine ou à distance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -304,7 +304,7 @@ export default function ArretTabacPage() {
                   rel="noopener noreferrer"
                   className="bg-white hover:bg-indigo-50 text-indigo-700 font-semibold px-8 py-4 rounded-full transition-colors text-base"
                 >
-                  Réserver en ligne — 70€
+                  Réserver en ligne — 80€
                 </a>
                 <a
                   href="tel:+33660811295"
@@ -333,7 +333,7 @@ export default function ArretTabacPage() {
           "url": "https://jean-charles-bernard.fr/arret-tabac",
           "telephone": "+33660811295",
           "email": "jeancharlesbernard3@gmail.com",
-          "priceRange": "70€",
+          "priceRange": "80€",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "4 Allée Les Marronniers",

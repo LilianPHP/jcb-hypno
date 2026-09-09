@@ -114,7 +114,7 @@
 - Background : composant `Silk` (WebGL, dynamic import SSR:false)
 - Headline BlurText : *"Libérez votre potentiel par l'hypnose"*
 - Badge : "HYPNOTHÉRAPEUTE CERTIFIÉ IFHE · BOUSSY-SAINT-ANTOINE & PARIS"
-- Floating badge : "70€ · 1h"
+- Floating badge : "80€ · 1h"
 - Google rating : 5.0 · 38 avis Google vérifiés
 - Photo : `/images/jc-portrait.jpg`
 - CTAs (Magnet) : "Réserver une séance" → `#rdv` | "Voir l'approche" → `#approche`
@@ -128,10 +128,10 @@
 - Background : `bg-slate-50`
 - Grille 3×2 de cards light
 - 6 méthodes : Ericksonienne · Humaniste · Classique · PNL · Addictions · RITMO®
-- Tous à 1h · 70€
+- Tous à 1h · 80€
 
 ### 5. TestimonialsSection — "Témoignages"
-- Stats CountUp : 15+ ans · 6 méthodes · 38 avis · 70€
+- Stats CountUp : 15+ ans · 6 méthodes · 38 avis · 80€
 - Google badge 5★
 - 6 vrais avis Google en `TiltedCard` 3×2
 - Lien "Voir tous" → Google Maps
@@ -198,7 +198,7 @@ npx vercel --prod --yes
 | Cabinet 1 | 4 Allée Les Marronniers, 91800 Boussy-Saint-Antoine |
 | Cabinet 2 | 4 Cité Négrier, 75007 Paris (Métro La Tour Maubourg) |
 | Horaires | Lun–Sam · 9h–20h |
-| Tarif | 70€ / 1h |
+| Tarif | 80€ / 1h |
 
 ---
 

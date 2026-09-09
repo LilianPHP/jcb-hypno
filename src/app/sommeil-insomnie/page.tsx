@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://jean-charles-bernard.fr'),
   alternates: { canonical: '/sommeil-insomnie' },
   title: 'Hypnose pour le sommeil et l\'insomnie à Boussy-Saint-Antoine | Jean-Charles Bernard',
-  description: 'Difficultés d\'endormissement, réveils nocturnes, mental qui tourne : retrouvez un sommeil réparateur grâce à l\'hypnose à Boussy-Saint-Antoine (91). Hypnothérapeute certifié IFHE. 1h · 70€.',
+  description: 'Difficultés d\'endormissement, réveils nocturnes, mental qui tourne : retrouvez un sommeil réparateur grâce à l\'hypnose à Boussy-Saint-Antoine (91). Hypnothérapeute certifié IFHE. 1h · 80€.',
   keywords: [
     'hypnose sommeil Boussy-Saint-Antoine',
     'hypnose insomnie Essonne',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Hypnose sommeil & insomnie — Boussy-Saint-Antoine',
-    description: 'Hypnothérapeute certifié IFHE · Endormissement, réveils nocturnes, sommeil non réparateur · 70€ · Boussy-Saint-Antoine (91)',
+    description: 'Hypnothérapeute certifié IFHE · Endormissement, réveils nocturnes, sommeil non réparateur · 80€ · Boussy-Saint-Antoine (91)',
     locale: 'fr_FR',
     type: 'website',
   },
@@ -125,7 +125,7 @@ export default function SommeilInsomniePage() {
               <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
                 Endormissement difficile, réveils nocturnes, mental qui ne s'arrête jamais :
                 Jean-Charles Bernard, hypnothérapeute certifié IFHE à Boussy-Saint-Antoine, agit sur ce qui vous tient éveillé.{' '}
-                <strong className="text-white">1h · 70€ · Sans médicament.</strong>
+                <strong className="text-white">1h · 80€ · Sans médicament.</strong>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -134,7 +134,7 @@ export default function SommeilInsomniePage() {
                   rel="noopener noreferrer"
                   className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-4 rounded-full transition-colors text-base"
                 >
-                  Réserver ma séance — 70€
+                  Réserver ma séance — 80€
                 </a>
                 <a
                   href="tel:+33660811295"
@@ -221,7 +221,7 @@ export default function SommeilInsomniePage() {
               <div className="text-center mb-14">
                 <span className="text-indigo-500 text-xs font-bold uppercase tracking-widest">Déroulé</span>
                 <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1E1B4B] mt-3">
-                  La séance sommeil & insomnie (1h · 70€)
+                  La séance sommeil & insomnie (1h · 80€)
                 </h2>
               </div>
             </FadeContent>
@@ -331,7 +331,7 @@ export default function SommeilInsomniePage() {
                 Prêt à retrouver vos nuits ?
               </h2>
               <p className="text-indigo-200 text-lg mb-8">
-                Réservez votre séance. 1h · 70€ · Au cabinet de Boussy-Saint-Antoine ou à distance.
+                Réservez votre séance. 1h · 80€ · Au cabinet de Boussy-Saint-Antoine ou à distance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -340,7 +340,7 @@ export default function SommeilInsomniePage() {
                   rel="noopener noreferrer"
                   className="bg-white hover:bg-indigo-50 text-indigo-700 font-semibold px-8 py-4 rounded-full transition-colors text-base"
                 >
-                  Réserver en ligne — 70€
+                  Réserver en ligne — 80€
                 </a>
                 <a
                   href="tel:+33660811295"
@@ -368,7 +368,7 @@ export default function SommeilInsomniePage() {
           "url": "https://jean-charles-bernard.fr/sommeil-insomnie",
           "telephone": "+33660811295",
           "email": "jeancharlesbernard3@gmail.com",
-          "priceRange": "70€",
+          "priceRange": "80€",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "4 Allée Les Marronniers",

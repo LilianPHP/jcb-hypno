@@ -93,7 +93,7 @@ export default function HeroSection() {
             {/* Floating badge */}
             <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-xl px-4 py-3 flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-emerald-500" />
-              <span className="text-xs font-bold text-slate-800">70€ · 1h</span>
+              <span className="text-xs font-bold text-slate-800">80€ · 1h</span>
             </div>
           </div>
         </div>

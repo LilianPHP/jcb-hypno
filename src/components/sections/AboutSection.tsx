@@ -63,7 +63,7 @@ export default function AboutSection() {
               Je reçois à mon cabinet de <strong>Boussy-Saint-Antoine</strong> (91).
               Je propose également des <strong>séances à distance</strong>, par téléphone ou
               en visio sur WhatsApp, où que vous soyez et sur des créneaux plus souples.
-              Les séances durent 1h pour 70€.
+              Les séances durent 1h pour 80€.
             </p>
 
             {/* Certifications */}
