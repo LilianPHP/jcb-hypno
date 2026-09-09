@@ -52,7 +52,7 @@ export default function AboutSection() {
               Jean-Charles Bernard
             </h2>
             <p className="text-indigo-600 font-semibold mb-4">
-              Hypnothérapeute diplômé IFHE · Paris, Boussy-Saint-Antoine & visio
+              Hypnothérapeute diplômé IFHE · Boussy-Saint-Antoine (91)
             </p>
             <p className="text-slate-600 leading-relaxed mb-4">
               Je pratique l'hypnose Ericksonienne et Humaniste depuis plus de 15 ans, formé à l'IFHE
@@ -60,9 +60,10 @@ export default function AboutSection() {
               L'hypnothérapeute vous accompagne sur le chemin qu'il a lui-même déjà parcouru.
             </p>
             <p className="text-slate-600 leading-relaxed mb-8">
-              Je reçois dans deux cabinets : à <strong>Boussy-Saint-Antoine</strong> (91)
-              et à <strong>Paris</strong>. Je propose également des <strong>séances en visio</strong>,
-              où que vous soyez et sur des créneaux plus souples. Les séances durent 1h pour 70€.
+              Je reçois à mon cabinet de <strong>Boussy-Saint-Antoine</strong> (91).
+              Je propose également des <strong>séances à distance</strong>, par téléphone ou
+              en visio sur WhatsApp, où que vous soyez et sur des créneaux plus souples.
+              Les séances durent 1h pour 70€.
             </p>
 
             {/* Certifications */}

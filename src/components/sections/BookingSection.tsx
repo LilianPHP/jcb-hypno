@@ -11,8 +11,8 @@ const CALENDLY_URL = 'https://calendly.com/jeancharlesbernard3/seance-1h';
 const contacts = [
   { icon: Phone, label: 'Téléphone', value: '06 60 81 12 95', href: 'tel:+33660811295' },
   { icon: Mail, label: 'Email', value: 'jeancharlesbernard3@gmail.com', href: 'mailto:jeancharlesbernard3@gmail.com' },
-  { icon: MapPin, label: 'Cabinets', value: 'Boussy-Saint-Antoine (91) · Paris', href: null },
-  { icon: Video, label: 'À distance', value: 'Séance en visio, partout en France', href: null },
+  { icon: MapPin, label: 'Cabinet', value: '4 Allée Les Marronniers, Boussy-Saint-Antoine (91)', href: null },
+  { icon: Video, label: 'À distance', value: 'Par téléphone ou en visio sur WhatsApp', href: null },
   { icon: Clock, label: 'Horaires', value: 'Lun–Sam · 9h–20h', href: null },
 ];
 
@@ -35,7 +35,7 @@ export default function BookingSection() {
             </h2>
             <p className="text-white/60 text-lg max-w-xl mx-auto">
               Choisissez un créneau directement en ligne. Première séance d'1h à 70€,
-              au cabinet ou en visio.
+              au cabinet ou à distance.
             </p>
           </div>
         </FadeContent>
@@ -118,10 +118,11 @@ export default function BookingSection() {
                 <Video size={16} />
               </span>
               <p className="text-white/50 text-xs leading-relaxed">
-                <span className="text-white/70 font-semibold">Séance en visio :</span> possible pour la plupart des
-                accompagnements, où que vous soyez. Indiquez-le simplement{' '}
-                <span className="text-white/70">au moment de la réservation</span> ou appelez Jean-Charles :
-                il vous envoie le lien de connexion avant la séance.
+                <span className="text-white/70 font-semibold">Séance à distance :</span> possible pour la plupart
+                des accompagnements, où que vous soyez. Choisissez{' '}
+                <span className="text-white/70">« Appel téléphonique »</span> au moment de la réservation et
+                indiquez votre numéro : Jean-Charles vous appelle sur{' '}
+                <span className="text-white/70">WhatsApp</span> à l'heure convenue, en audio ou en visio.
               </p>
             </div>
 

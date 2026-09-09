@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'hypnothérapeute poids Montgeron',
     'hypnose sucre Essonne',
     'rapport à la nourriture hypnose 91',
-    'hypnose alimentation en visio',
+    'hypnose alimentation à distance',
   ],
   openGraph: {
     title: 'Hypnose poids & alimentation — Boussy-Saint-Antoine',
@@ -77,8 +77,8 @@ const faqs = [
     a: 'Oui, l\'hypnose donne de bons résultats sur les compulsions et les envies irrépressibles, car elle travaille au niveau où ces automatismes se déclenchent. En revanche, en cas de trouble du comportement alimentaire diagnostiqué, l\'hypnose vient en complément d\'un suivi médical — jamais à sa place.',
   },
   {
-    q: 'Peut-on faire la séance en visio ?',
-    a: 'Oui. L\'hypnose repose sur la voix et sur la relation, pas sur la présence physique : le travail est le même à distance. Il vous faut simplement un endroit calme où vous ne serez pas dérangé, une connexion correcte et un casque ou des écouteurs. Le travail sur les déclencheurs alimentaires se mène aussi bien à distance. Précisez-le au moment de la réservation et Jean-Charles vous envoie le lien avant la séance.',
+    q: 'Peut-on faire la séance à distance ?',
+    a: 'Oui. L\'hypnose repose sur la voix et sur la relation, pas sur la présence physique : le travail est le même à distance. Il vous faut simplement un endroit calme où vous ne serez pas dérangé, une connexion correcte et un casque ou des écouteurs. Le travail sur les déclencheurs alimentaires se mène aussi bien à distance. Choisissez « Appel téléphonique » au moment de la réservation : Jean-Charles vous appelle sur WhatsApp à l\'heure convenue, en audio ou en visio.',
   },
 ];
 
@@ -243,9 +243,8 @@ export default function PoidsAlimentationPage() {
                 <svg className="text-indigo-500 flex-shrink-0 mt-0.5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
                 <p className="text-indigo-800 text-sm leading-relaxed">
                   <strong>Cabinet à Boussy-Saint-Antoine</strong> — 4 Allée Les Marronniers, 91800.
-                  Consultations également à <strong>Paris 7ème</strong> (4 Cité Négrier, Métro La Tour Maubourg).
                   Lun–Sam · 9h–20h.<br />
-                  <strong>Séance en visio</strong> également possible, où que vous soyez.
+                  <strong>Séance à distance</strong> également possible : par téléphone ou en visio sur WhatsApp.
                 </p>
               </div>
             </FadeContent>
@@ -331,7 +330,7 @@ export default function PoidsAlimentationPage() {
                 Prêt à sortir du cycle des régimes ?
               </h2>
               <p className="text-indigo-200 text-lg mb-8">
-                Réservez votre séance. 1h · 70€ · Boussy-Saint-Antoine, Paris ou en visio.
+                Réservez votre séance. 1h · 70€ · Au cabinet de Boussy-Saint-Antoine ou à distance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

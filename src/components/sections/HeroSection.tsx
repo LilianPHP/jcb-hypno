@@ -26,7 +26,7 @@ export default function HeroSection() {
         <div className="space-y-8">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-xs font-semibold text-indigo-200 tracking-wider uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Hypnothérapeute certifié IFHE · Boussy-Saint-Antoine, Paris & visio
+            Hypnothérapeute certifié IFHE · Boussy-Saint-Antoine (91) · Cabinet ou à distance
           </div>
 
           <BlurText
