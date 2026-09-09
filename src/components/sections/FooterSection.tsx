@@ -21,9 +21,9 @@ export default function FooterSection() {
   return (
     <footer className="bg-slate-950 text-white/60">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="space-y-4 sm:col-span-2">
             <div>
               <div className="font-serif text-white text-lg font-bold">Jean-Charles Bernard</div>
               <div className="text-indigo-400 text-xs tracking-widest uppercase mt-0.5">Hypnose · Live Your Dreams</div>
@@ -50,8 +50,11 @@ export default function FooterSection() {
                 </li>
               ))}
             </ul>
+          </div>
 
-            <div className="text-white text-sm font-semibold mt-8 mb-4 uppercase tracking-wider">Spécialités</div>
+          {/* Spécialités */}
+          <div>
+            <div className="text-white text-sm font-semibold mb-4 uppercase tracking-wider">Spécialités</div>
             <ul className="space-y-2">
               {specialites.map(s => (
                 <li key={s.href}>
