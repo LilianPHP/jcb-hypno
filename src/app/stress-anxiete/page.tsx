@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'gestion stress hypnose Montgeron',
     'hypnose burn-out Essonne',
     'anxiété hypnose 91',
+    'hypnose stress anxiété en visio',
   ],
   openGraph: {
     title: 'Hypnose contre le stress et l\'anxiété — Boussy-Saint-Antoine',
@@ -74,6 +75,10 @@ const faqs = [
   {
     q: 'Est-ce que je vais perdre le contrôle pendant la séance ?',
     a: 'Non — contrairement aux idées reçues, l\'hypnose n\'est pas un état de perte de contrôle. Vous restez pleinement conscient, vous entendez tout ce que dit Jean-Charles et vous pouvez sortir de cet état à tout moment. C\'est simplement un état de relaxation intense, similaire à la méditation profonde.',
+  },
+  {
+    q: 'Peut-on faire la séance en visio ?',
+    a: 'Oui. L\'hypnose repose sur la voix et sur la relation, pas sur la présence physique : le travail est le même à distance. Il vous faut simplement un endroit calme où vous ne serez pas dérangé, une connexion correcte et un casque ou des écouteurs. Beaucoup de personnes anxieuses se détendent même plus vite depuis leur propre environnement. Précisez-le au moment de la réservation et Jean-Charles vous envoie le lien avant la séance.',
   },
 ];
 
@@ -238,7 +243,8 @@ export default function StressAnxietePage() {
                 <p className="text-indigo-800 text-sm leading-relaxed">
                   <strong>Cabinet à Boussy-Saint-Antoine</strong> — 4 Allée Les Marronniers, 91800.
                   Consultations également à <strong>Paris 7ème</strong> (4 Cité Négrier, Métro La Tour Maubourg).
-                  Lun–Sam · 9h–20h.
+                  Lun–Sam · 9h–20h.<br />
+                  <strong>Séance en visio</strong> également possible, où que vous soyez.
                 </p>
               </div>
             </FadeContent>
@@ -315,7 +321,7 @@ export default function StressAnxietePage() {
                 Prêt à retrouver la sérénité ?
               </h2>
               <p className="text-indigo-200 text-lg mb-8">
-                Réservez votre séance. 1h · 70€ · Boussy-Saint-Antoine ou Paris.
+                Réservez votre séance. 1h · 70€ · Boussy-Saint-Antoine, Paris ou en visio.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

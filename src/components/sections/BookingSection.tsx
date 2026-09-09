@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import Script from 'next/script';
 import FadeContent from '@/components/effects/FadeContent';
 import Magnet from '@/components/effects/Magnet';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Video } from 'lucide-react';
 
 // ⚠️ Remplacer par l'URL Calendly de Jean-Charles une fois le compte créé
 const CALENDLY_URL = 'https://calendly.com/jeancharlesbernard3/seance-1h';
@@ -12,6 +12,7 @@ const contacts = [
   { icon: Phone, label: 'Téléphone', value: '06 60 81 12 95', href: 'tel:+33660811295' },
   { icon: Mail, label: 'Email', value: 'jeancharlesbernard3@gmail.com', href: 'mailto:jeancharlesbernard3@gmail.com' },
   { icon: MapPin, label: 'Cabinets', value: 'Boussy-Saint-Antoine (91) · Paris', href: null },
+  { icon: Video, label: 'À distance', value: 'Séance en visio, partout en France', href: null },
   { icon: Clock, label: 'Horaires', value: 'Lun–Sam · 9h–20h', href: null },
 ];
 
@@ -33,7 +34,8 @@ export default function BookingSection() {
               Réservez votre séance
             </h2>
             <p className="text-white/60 text-lg max-w-xl mx-auto">
-              Choisissez un créneau directement en ligne. Première séance d'1h à 70€.
+              Choisissez un créneau directement en ligne. Première séance d'1h à 70€,
+              au cabinet ou en visio.
             </p>
           </div>
         </FadeContent>
@@ -110,6 +112,19 @@ export default function BookingSection() {
                 style={{ minWidth: '320px', height: '700px' }}
               />
             </div>
+            {/* Séance en visio */}
+            <div className="mt-4 bg-indigo-500/10 border border-indigo-500/20 rounded-xl px-5 py-4 flex gap-3 items-start">
+              <span className="text-indigo-300 mt-0.5 flex-shrink-0">
+                <Video size={16} />
+              </span>
+              <p className="text-white/50 text-xs leading-relaxed">
+                <span className="text-white/70 font-semibold">Séance en visio :</span> possible pour la plupart des
+                accompagnements, où que vous soyez. Indiquez-le simplement{' '}
+                <span className="text-white/70">au moment de la réservation</span> ou appelez Jean-Charles :
+                il vous envoie le lien de connexion avant la séance.
+              </p>
+            </div>
+
             {/* Politique d'annulation */}
             <div className="mt-4 bg-white/5 border border-white/10 rounded-xl px-5 py-4 flex gap-3 items-start">
               <span className="text-amber-400 mt-0.5 flex-shrink-0">

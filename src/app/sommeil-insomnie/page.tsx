@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'hypnose endormissement Montgeron',
     'hypnose contre insomnie 91',
     'mieux dormir hypnose Essonne',
+    'hypnose sommeil en visio',
   ],
   openGraph: {
     title: 'Hypnose sommeil & insomnie — Boussy-Saint-Antoine',
@@ -74,6 +75,10 @@ const faqs = [
   {
     q: 'Vais-je m\'endormir pendant la séance ?',
     a: 'L\'état hypnotique n\'est pas le sommeil : vous restez conscient et vous entendez tout. Certaines personnes glissent malgré tout vers un assoupissement — ce n\'est pas un problème, le travail se poursuit. C\'est souvent bon signe chez quelqu\'un qui ne parvient plus à lâcher prise.',
+  },
+  {
+    q: 'Peut-on faire la séance en visio ?',
+    a: 'Oui. L\'hypnose repose sur la voix et sur la relation, pas sur la présence physique : le travail est le même à distance. Il vous faut simplement un endroit calme où vous ne serez pas dérangé, une connexion correcte et un casque ou des écouteurs. C\'est souvent plus pratique pour une séance en fin de journée, juste avant le coucher. Précisez-le au moment de la réservation et Jean-Charles vous envoie le lien avant la séance.',
   },
 ];
 
@@ -239,7 +244,8 @@ export default function SommeilInsomniePage() {
                 <p className="text-indigo-800 text-sm leading-relaxed">
                   <strong>Cabinet à Boussy-Saint-Antoine</strong> — 4 Allée Les Marronniers, 91800.
                   Consultations également à <strong>Paris 7ème</strong> (4 Cité Négrier, Métro La Tour Maubourg).
-                  Lun–Sam · 9h–20h.
+                  Lun–Sam · 9h–20h.<br />
+                  <strong>Séance en visio</strong> également possible, où que vous soyez.
                 </p>
               </div>
             </FadeContent>
@@ -326,7 +332,7 @@ export default function SommeilInsomniePage() {
                 Prêt à retrouver vos nuits ?
               </h2>
               <p className="text-indigo-200 text-lg mb-8">
-                Réservez votre séance. 1h · 70€ · Boussy-Saint-Antoine ou Paris.
+                Réservez votre séance. 1h · 70€ · Boussy-Saint-Antoine, Paris ou en visio.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

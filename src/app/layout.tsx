@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   title: "Jean-Charles Bernard — Hypnothérapeute | Paris & Boussy-Saint-Antoine",
   description:
-    "Jean-Charles Bernard, hypnothérapeute diplômé IFHE à Paris 7ème et Boussy-Saint-Antoine. Hypnose Ericksonienne, Humaniste, RITMO®, PNL. 15 ans d'expérience. 70€/séance.",
+    "Jean-Charles Bernard, hypnothérapeute diplômé IFHE à Paris 7ème et Boussy-Saint-Antoine, également en visio. Hypnose Ericksonienne, Humaniste, RITMO®, PNL. 15 ans d'expérience. 70€/séance.",
   keywords: [
     "hypnothérapeute Paris 7",
     "hypnothérapeute Boussy-Saint-Antoine",
@@ -34,11 +34,14 @@ export const metadata: Metadata = {
     "RITMO Paris",
     "arrêter tabac hypnose Île-de-France",
     "hypnose enfants adolescents",
+    "hypnose en visio",
+    "séance hypnose à distance",
+    "hypnothérapeute en ligne France",
   ],
   openGraph: {
     title: "Jean-Charles Bernard — Hypnothérapeute",
     description:
-      "15 ans d'expérience · Hypnose Ericksonienne, Humaniste, RITMO® · Paris & Boussy-Saint-Antoine · 70€/séance",
+      "15 ans d'expérience · Hypnose Ericksonienne, Humaniste, RITMO® · Paris, Boussy-Saint-Antoine & visio · 70€/séance",
     locale: "fr_FR",
     type: "website",
   },

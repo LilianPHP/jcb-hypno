@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'hypnothérapeute poids Montgeron',
     'hypnose sucre Essonne',
     'rapport à la nourriture hypnose 91',
+    'hypnose alimentation en visio',
   ],
   openGraph: {
     title: 'Hypnose poids & alimentation — Boussy-Saint-Antoine',
@@ -74,6 +75,10 @@ const faqs = [
   {
     q: 'L\'hypnose fonctionne-t-elle sur les compulsions alimentaires ?',
     a: 'Oui, l\'hypnose donne de bons résultats sur les compulsions et les envies irrépressibles, car elle travaille au niveau où ces automatismes se déclenchent. En revanche, en cas de trouble du comportement alimentaire diagnostiqué, l\'hypnose vient en complément d\'un suivi médical — jamais à sa place.',
+  },
+  {
+    q: 'Peut-on faire la séance en visio ?',
+    a: 'Oui. L\'hypnose repose sur la voix et sur la relation, pas sur la présence physique : le travail est le même à distance. Il vous faut simplement un endroit calme où vous ne serez pas dérangé, une connexion correcte et un casque ou des écouteurs. Le travail sur les déclencheurs alimentaires se mène aussi bien à distance. Précisez-le au moment de la réservation et Jean-Charles vous envoie le lien avant la séance.',
   },
 ];
 
@@ -239,7 +244,8 @@ export default function PoidsAlimentationPage() {
                 <p className="text-indigo-800 text-sm leading-relaxed">
                   <strong>Cabinet à Boussy-Saint-Antoine</strong> — 4 Allée Les Marronniers, 91800.
                   Consultations également à <strong>Paris 7ème</strong> (4 Cité Négrier, Métro La Tour Maubourg).
-                  Lun–Sam · 9h–20h.
+                  Lun–Sam · 9h–20h.<br />
+                  <strong>Séance en visio</strong> également possible, où que vous soyez.
                 </p>
               </div>
             </FadeContent>
@@ -325,7 +331,7 @@ export default function PoidsAlimentationPage() {
                 Prêt à sortir du cycle des régimes ?
               </h2>
               <p className="text-indigo-200 text-lg mb-8">
-                Réservez votre séance. 1h · 70€ · Boussy-Saint-Antoine ou Paris.
+                Réservez votre séance. 1h · 70€ · Boussy-Saint-Antoine, Paris ou en visio.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
