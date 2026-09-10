@@ -9,6 +9,7 @@ const certifications = [
   'Praticien Hypnose Humaniste & TSA — IFHE (2018)',
   'Spécialisation Hypnose et Addictions — IFHE (2025)',
   'Certifié RITMO® — Lili Ruggieri (2025)',
+  'Spécialisation Hypnose et Traumatismes — IFHE (2026)',
 ];
 
 export default function AboutSection() {

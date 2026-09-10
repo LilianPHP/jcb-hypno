@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://jean-charles-bernard.fr'),
   alternates: { canonical: '/traumatismes' },
   title: 'Hypnose et traumatismes à Boussy-Saint-Antoine — RITMO® | Jean-Charles Bernard',
-  description: 'Choc émotionnel, accident, deuil, événement marquant : se libérer de l\'empreinte du passé par l\'hypnose et le RITMO® à Boussy-Saint-Antoine (91). Hypnothérapeute certifié. 1h · 80€.',
+  description: 'Choc émotionnel, accident, deuil, événement marquant : se libérer de l\'empreinte du passé par l\'hypnose et le RITMO® à Boussy-Saint-Antoine (91). Spécialisation IFHE hypnose et traumatismes. 1h · 80€.',
   keywords: [
     'hypnose traumatisme Boussy-Saint-Antoine',
     'RITMO Essonne',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Hypnose et traumatismes — Boussy-Saint-Antoine',
-    description: 'Certifié RITMO® · Choc émotionnel, accident, deuil, passé douloureux · 80€ · Boussy-Saint-Antoine (91)',
+    description: 'Spécialisation IFHE hypnose et traumatismes · Certifié RITMO® · Choc, accident, deuil · 80€ · Boussy-Saint-Antoine (91)',
     locale: 'fr_FR',
     type: 'website',
   },
@@ -124,8 +124,8 @@ export default function TraumatismesPage() {
               </h1>
               <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
                 Choc émotionnel, accident, deuil, événement resté en travers :
-                Jean-Charles Bernard, certifié RITMO® et hypnothérapeute IFHE à Boussy-Saint-Antoine,
-                travaille là où le souvenir s'est figé.{' '}
+                Jean-Charles Bernard, spécialisé en hypnose et traumatismes (IFHE 2026) et certifié RITMO®,
+                travaille à Boussy-Saint-Antoine là où le souvenir s'est figé.{' '}
                 <strong className="text-white">1h · 80€ · Sans avoir à tout raconter.</strong>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -367,7 +367,7 @@ export default function TraumatismesPage() {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "Jean-Charles Bernard — Hypnothérapeute",
-          "description": "Hypnose et RITMO® pour le traitement des traumatismes à Boussy-Saint-Antoine (91). Hypnothérapeute certifié IFHE, certifié RITMO®.",
+          "description": "Hypnose et RITMO® pour le traitement des traumatismes à Boussy-Saint-Antoine (91). Spécialisation IFHE hypnose et traumatismes (2026), certifié RITMO®.",
           "url": "https://jean-charles-bernard.fr/traumatismes",
           "telephone": "+33660811295",
           "email": "jeancharlesbernard3@gmail.com",
