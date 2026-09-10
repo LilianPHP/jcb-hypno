@@ -215,59 +215,8 @@ export default function TraumatismesPage() {
           </div>
         </section>
 
-        {/* ── DEUX OUTILS DISTINCTS ── */}
-        <section className="py-20 bg-white">
-          <div className="max-w-4xl mx-auto px-6">
-            <FadeContent>
-              <div className="text-center mb-12">
-                <span className="text-indigo-500 text-xs font-bold uppercase tracking-widest">À ne pas confondre</span>
-                <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1E1B4B] mt-3 mb-4">
-                  Deux outils distincts, pas deux noms pour la même chose
-                </h2>
-                <p className="text-slate-500 max-w-2xl mx-auto">
-                  Jean-Charles est formé aux deux. Ils ne se substituent pas l&apos;un à l&apos;autre :
-                  il détermine avec vous celui qui convient à votre situation.
-                </p>
-              </div>
-            </FadeContent>
-            <div className="grid md:grid-cols-2 gap-6">
-              <FadeContent delay={0.1}>
-                <div className="h-full bg-indigo-50 border border-indigo-100 rounded-2xl p-7 flex flex-col">
-                  <span className="self-start bg-indigo-600 text-white text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
-                    Spécialisation
-                  </span>
-                  <h3 className="font-serif text-xl font-bold text-[#1E1B4B] mb-3">Hypnose et traumatismes</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed flex-1">
-                    Un protocole d&apos;hypnose conçu spécifiquement pour le trauma. Le travail passe par
-                    l&apos;état hypnotique et par le langage, à un rythme ajusté à ce que vous pouvez traverser.
-                  </p>
-                  <p className="text-indigo-700 text-xs font-semibold mt-5 pt-4 border-t border-indigo-100">
-                    Certifié IFHE — 2026
-                  </p>
-                </div>
-              </FadeContent>
-              <FadeContent delay={0.2}>
-                <div className="h-full bg-emerald-50 border border-emerald-100 rounded-2xl p-7 flex flex-col">
-                  <span className="self-start bg-emerald-600 text-white text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
-                    Technique
-                  </span>
-                  <h3 className="font-serif text-xl font-bold text-[#1E1B4B] mb-3">RITMO®</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed flex-1">
-                    Retraitement de l&apos;Information Traumatique par les Mouvements Oculaires : des
-                    stimulations visuelles et corporelles alternées, dans la lignée de l&apos;EMDR, qui
-                    visent directement le souvenir resté figé.
-                  </p>
-                  <p className="text-emerald-700 text-xs font-semibold mt-5 pt-4 border-t border-emerald-100">
-                    Certifié Lili Ruggieri — 2025
-                  </p>
-                </div>
-              </FadeContent>
-            </div>
-          </div>
-        </section>
-
         {/* ── PROTOCOLE ── */}
-        <section className="py-20 bg-[#F8F7FF]">
+        <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-6">
             <FadeContent>
               <div className="text-center mb-14">
