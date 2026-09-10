@@ -1,6 +1,6 @@
 'use client';
 import FadeContent from '@/components/effects/FadeContent';
-import { MessageSquare, Heart, Clock, Activity, Coffee, Sparkles, Cigarette, Brain, Utensils, Moon, ShieldCheck, ArrowRight } from 'lucide-react';
+import { MessageSquare, Heart, Clock, Activity, Coffee, Sparkles, Cigarette, Brain, Utensils, Moon, ShieldCheck, HeartHandshake, ArrowRight } from 'lucide-react';
 
 const motifs = [
   {
@@ -67,6 +67,12 @@ const services = [
     badge: '1h · 80€',
   },
   {
+    icon: HeartHandshake,
+    title: 'Spécialisation Traumatismes',
+    desc: 'Retraitement des chocs émotionnels, deuils et événements marquants, sans avoir à tout raconter. Certifié IFHE en hypnose et traumatismes (2026).',
+    badge: '1h · 80€',
+  },
+  {
     icon: Sparkles,
     title: 'RITMO®',
     desc: 'Retraitement de l\'Information Traumatique par les Mouvements Oculaires. Stimulations visuelles et corporelles, inspiré de l\'EMDR. Certifié Lili Ruggieri (2025).',
@@ -85,13 +91,13 @@ export default function ServicesSection() {
               Des approches qui ont fait leurs preuves
             </h2>
             <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
-              Jean-Charles maîtrise 6 méthodes complémentaires pour une prise en charge sur mesure
+              Jean-Charles maîtrise 7 méthodes et spécialisations complémentaires pour une prise en charge sur mesure
               de votre problématique spécifique.
             </p>
           </div>
         </FadeContent>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:[&>*:last-child]:col-start-2">
           {services.map((s, i) => (
             <FadeContent key={s.title} delay={i * 0.1}>
               <div className="group h-full bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:border-emerald-200 transition-all duration-300 flex flex-col">
