@@ -3,27 +3,35 @@ import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import { trackPhoneClick, trackExternalBookingClick } from '@/lib/analytics';
 
 const links = [
-  { label: 'Mon approche', href: '#approche' },
-  { label: 'Séances & tarifs', href: '#services' },
-  { label: 'Témoignages', href: '#temoignages' },
-  { label: 'À propos', href: '#about' },
-  { label: 'Prendre RDV', href: '#rdv' },
+  { label: 'Mon approche', href: '/#approche' },
+  { label: 'Séances & tarifs', href: '/#services' },
+  { label: 'Témoignages', href: '/#temoignages' },
+  { label: 'À propos', href: '/#about' },
+  { label: 'Prendre RDV', href: '/#rdv' },
+];
+
+const specialites = [
+  { label: 'Arrêt du tabac', href: '/arret-tabac' },
+  { label: 'Stress & anxiété', href: '/stress-anxiete' },
+  { label: 'Poids & alimentation', href: '/poids-alimentation' },
+  { label: 'Sommeil & insomnie', href: '/sommeil-insomnie' },
+  { label: 'Traumatismes', href: '/traumatismes' },
 ];
 
 export default function FooterSection() {
   return (
     <footer className="bg-slate-950 text-white/60">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="space-y-4 sm:col-span-2">
             <div>
               <div className="font-serif text-white text-lg font-bold">Jean-Charles Bernard</div>
               <div className="text-indigo-400 text-xs tracking-widest uppercase mt-0.5">Hypnose · Live Your Dreams</div>
             </div>
             <p className="text-sm leading-relaxed">
               Hypnothérapeute certifié IFHE depuis 2005. Accompagnement bienveillant et professionnel
-              à Boussy-Saint-Antoine et Paris.
+              à Boussy-Saint-Antoine (91), en cabinet ou à distance.
             </p>
             <div className="flex items-center gap-2 mt-2">
               {[...Array(5)].map((_, i) => (
@@ -40,6 +48,18 @@ export default function FooterSection() {
               {links.map(l => (
                 <li key={l.href}>
                   <a href={l.href} className="text-sm hover:text-indigo-400 transition-colors">{l.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Spécialités */}
+          <div>
+            <div className="text-white text-sm font-semibold mb-4 uppercase tracking-wider">Spécialités</div>
+            <ul className="space-y-2">
+              {specialites.map(s => (
+                <li key={s.href}>
+                  <a href={s.href} className="text-sm hover:text-indigo-400 transition-colors">{s.label}</a>
                 </li>
               ))}
             </ul>
@@ -81,15 +101,17 @@ export default function FooterSection() {
 
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/30">
           <span>© {new Date().getFullYear()} Jean-Charles Bernard · Tous droits réservés</span>
-          <a
-            href="https://hypnose-liveyourdreams.fr"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackExternalBookingClick('other', 'footer_bottom')}
-            className="hover:text-white/60 transition-colors"
-          >
-            hypnose-liveyourdreams.fr
-          </a>
+          <span>
+            Site web créé avec ❤️ par{' '}
+            <a
+              href="https://webmate.digital"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-400 hover:text-indigo-300 transition-colors"
+            >
+              webmate.digital
+            </a>
+          </span>
         </div>
       </div>
     </footer>

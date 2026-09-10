@@ -24,9 +24,9 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-20 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left — text */}
         <div className="space-y-8">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-xs font-semibold text-indigo-200 tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 font-semibold text-indigo-200 uppercase text-[11px] tracking-[0.03em] sm:text-xs sm:tracking-wider xl:text-[11px] xl:tracking-[0.02em] xl:whitespace-nowrap">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Hypnothérapeute certifié IFHE · Boussy-Saint-Antoine & Paris
+            Hypnothérapeute certifié IFHE · Boussy-Saint-Antoine (91) · Cabinet ou à distance
           </div>
 
           <BlurText
@@ -93,7 +93,7 @@ export default function HeroSection() {
             {/* Floating badge */}
             <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-xl px-4 py-3 flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-emerald-500" />
-              <span className="text-xs font-bold text-slate-800">70€ · 1h</span>
+              <span className="text-xs font-bold text-slate-800">80€ · 1h</span>
             </div>
           </div>
         </div>
