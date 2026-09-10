@@ -2,73 +2,32 @@ import { MetadataRoute } from 'next';
 
 const BASE_URL = 'https://jean-charles-bernard.fr';
 
+/**
+ * Une entrée par page réellement indexable.
+ *
+ * Pas d'URL à ancre (#approche, #rdv…) : Google ignore les fragments, ce ne
+ * sont pas des pages distinctes. Les déclarer dilue le sitemap et peut faire
+ * remonter des « pages en double ».
+ *
+ * `lastModified` est figé à la date de dernière modification réelle du
+ * contenu, à mettre à jour quand la page change. Surtout pas `new Date()` :
+ * toutes les pages se déclareraient modifiées à chaque déploiement, et Google
+ * finit par ignorer un lastmod qui crie au loup.
+ */
+const pages: { path: string; lastModified: string; priority: number }[] = [
+  { path: '', lastModified: '2026-09-10', priority: 1.0 },
+  { path: '/arret-tabac', lastModified: '2026-09-09', priority: 0.9 },
+  { path: '/stress-anxiete', lastModified: '2026-09-09', priority: 0.9 },
+  { path: '/poids-alimentation', lastModified: '2026-09-09', priority: 0.9 },
+  { path: '/sommeil-insomnie', lastModified: '2026-09-09', priority: 0.9 },
+  { path: '/traumatismes', lastModified: '2026-09-10', priority: 0.9 },
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: BASE_URL,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1.0,
-    },
-    {
-      url: `${BASE_URL}/#approche`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/#seances`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/#avis`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/#a-propos`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/arret-tabac`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/stress-anxiete`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/poids-alimentation`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/sommeil-insomnie`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/traumatismes`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/#rdv`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-  ];
+  return pages.map(({ path, lastModified, priority }) => ({
+    url: `${BASE_URL}${path}`,
+    lastModified: new Date(lastModified),
+    changeFrequency: 'monthly',
+    priority,
+  }));
 }
