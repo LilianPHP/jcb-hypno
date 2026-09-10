@@ -8,8 +8,8 @@ import Script from 'next/script';
 export const metadata: Metadata = {
   metadataBase: new URL('https://jean-charles-bernard.fr'),
   alternates: { canonical: '/traumatismes' },
-  title: 'Hypnose et traumatismes à Boussy-Saint-Antoine — RITMO® | Jean-Charles Bernard',
-  description: 'Choc émotionnel, accident, deuil, événement marquant : se libérer de l\'empreinte du passé par l\'hypnose et le RITMO® à Boussy-Saint-Antoine (91). Spécialisation IFHE hypnose et traumatismes. 1h · 80€.',
+  title: 'Hypnose et traumatismes à Boussy-Saint-Antoine | Jean-Charles Bernard',
+  description: 'Choc émotionnel, accident, deuil, événement marquant : se libérer de l\'empreinte du passé à Boussy-Saint-Antoine (91). Spécialisation IFHE hypnose et traumatismes, et technique RITMO®. 1h · 80€.',
   keywords: [
     'hypnose traumatisme Boussy-Saint-Antoine',
     'RITMO Essonne',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Hypnose et traumatismes — Boussy-Saint-Antoine',
-    description: 'Spécialisation IFHE hypnose et traumatismes · Certifié RITMO® · Choc, accident, deuil · 80€ · Boussy-Saint-Antoine (91)',
+    description: 'Spécialisation IFHE hypnose et traumatismes · Technique RITMO® · Choc, accident, deuil · 80€ · Boussy-Saint-Antoine (91)',
     locale: 'fr_FR',
     type: 'website',
   },
@@ -57,8 +57,8 @@ const testimonials = [
 
 const faqs = [
   {
-    q: 'Qu\'est-ce que le RITMO® exactement ?',
-    a: 'RITMO® signifie « Retraitement de l\'Information Traumatique par les Mouvements Oculaires ». La méthode s\'appuie sur des stimulations visuelles et corporelles alternées, dans la lignée de l\'EMDR, combinées à l\'état hypnotique. Jean-Charles est certifié RITMO® auprès de Lili Ruggieri depuis 2025.',
+    q: 'Quelle différence entre « hypnose et traumatismes » et le RITMO® ?',
+    a: 'Ce sont deux outils distincts, pas deux noms pour la même chose. « Hypnose et traumatismes » est un protocole d\'hypnose dédié au trauma, pour lequel Jean-Charles est certifié IFHE depuis 2026. Le RITMO® — Retraitement de l\'Information Traumatique par les Mouvements Oculaires — est une technique de stimulations visuelles et corporelles alternées, dans la lignée de l\'EMDR, certifiée auprès de Lili Ruggieri en 2025. Jean-Charles détermine avec vous lequel convient à votre situation.',
   },
   {
     q: 'Devrai-je raconter en détail ce que j\'ai vécu ?',
@@ -96,7 +96,7 @@ const symptoms = [
 const steps = [
   { num: '01', title: 'Mise en sécurité', desc: 'Avant tout travail sur le souvenir : ancrage de ressources internes, pour que vous ayez de quoi tenir pendant la séance.' },
   { num: '02', title: 'Ciblage', desc: 'Identifier ce qui déclenche encore une réaction aujourd\'hui, et mesurer sa charge. Sans avoir à raconter la scène en détail.' },
-  { num: '03', title: 'Retraitement RITMO®', desc: 'Stimulations visuelles et corporelles alternées sous hypnose. Le souvenir est « redigéré » et perd sa charge émotionnelle.' },
+  { num: '03', title: 'Le retraitement', desc: 'Selon ce qui convient à votre situation : le protocole d\'hypnose dédié au trauma, ou le RITMO®. Le souvenir perd sa charge émotionnelle.' },
   { num: '04', title: 'Vérification', desc: 'On revient sur le déclencheur pour mesurer ce qui a bougé, puis on ancre le nouvel état. Rien n\'est laissé ouvert en fin de séance.' },
 ];
 
@@ -120,7 +120,7 @@ export default function TraumatismesPage() {
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
                 Se libérer d'un{' '}
                 <span className="text-indigo-400">traumatisme</span>{' '}
-                par l'hypnose et le RITMO®
+                par l'hypnose
               </h1>
               <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
                 Choc émotionnel, accident, deuil, événement resté en travers :
@@ -193,14 +193,14 @@ export default function TraumatismesPage() {
                 </h2>
                 <p className="text-slate-500 max-w-2xl mx-auto">
                   Un souvenir traumatique n'a jamais été rangé comme les autres : il reste vif,
-                  au présent, prêt à se déclencher. Le RITMO® vient terminer ce rangement resté en suspens.
+                  au présent, prêt à se déclencher. Le travail thérapeutique vient terminer ce rangement resté en suspens.
                 </p>
               </div>
             </FadeContent>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { icon: '🧠', title: 'Un souvenir mal rangé', desc: 'Le cerveau n\'a pas pu « digérer » l\'événement sur le moment. Il reste stocké brut, avec ses images, ses sensations et sa charge intactes.' },
-                { icon: '👁️', title: 'Stimulations alternées', desc: 'Le RITMO® relance le traitement resté bloqué, dans la lignée de l\'EMDR. Le souvenir se range enfin, et cesse de faire irruption.' },
+                { icon: '🔓', title: 'Relancer le traitement', desc: 'Le travail vient terminer ce que le cerveau n\'a pas pu faire sur le moment. Le souvenir se range enfin, et cesse de faire irruption.' },
                 { icon: '🤐', title: 'Sans tout raconter', desc: 'Le travail se fait là où le souvenir est stocké, pas dans le récit. Vous n\'êtes jamais obligé de décrire ce que vous avez vécu.' },
               ].map(({ icon, title, desc }) => (
                 <FadeContent key={title} delay={0.1}>
@@ -215,8 +215,59 @@ export default function TraumatismesPage() {
           </div>
         </section>
 
-        {/* ── PROTOCOLE ── */}
+        {/* ── DEUX OUTILS DISTINCTS ── */}
         <section className="py-20 bg-white">
+          <div className="max-w-4xl mx-auto px-6">
+            <FadeContent>
+              <div className="text-center mb-12">
+                <span className="text-indigo-500 text-xs font-bold uppercase tracking-widest">À ne pas confondre</span>
+                <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1E1B4B] mt-3 mb-4">
+                  Deux outils distincts, pas deux noms pour la même chose
+                </h2>
+                <p className="text-slate-500 max-w-2xl mx-auto">
+                  Jean-Charles est formé aux deux. Ils ne se substituent pas l&apos;un à l&apos;autre :
+                  il détermine avec vous celui qui convient à votre situation.
+                </p>
+              </div>
+            </FadeContent>
+            <div className="grid md:grid-cols-2 gap-6">
+              <FadeContent delay={0.1}>
+                <div className="h-full bg-indigo-50 border border-indigo-100 rounded-2xl p-7 flex flex-col">
+                  <span className="self-start bg-indigo-600 text-white text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+                    Spécialisation
+                  </span>
+                  <h3 className="font-serif text-xl font-bold text-[#1E1B4B] mb-3">Hypnose et traumatismes</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed flex-1">
+                    Un protocole d&apos;hypnose conçu spécifiquement pour le trauma. Le travail passe par
+                    l&apos;état hypnotique et par le langage, à un rythme ajusté à ce que vous pouvez traverser.
+                  </p>
+                  <p className="text-indigo-700 text-xs font-semibold mt-5 pt-4 border-t border-indigo-100">
+                    Certifié IFHE — 2026
+                  </p>
+                </div>
+              </FadeContent>
+              <FadeContent delay={0.2}>
+                <div className="h-full bg-emerald-50 border border-emerald-100 rounded-2xl p-7 flex flex-col">
+                  <span className="self-start bg-emerald-600 text-white text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+                    Technique
+                  </span>
+                  <h3 className="font-serif text-xl font-bold text-[#1E1B4B] mb-3">RITMO®</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed flex-1">
+                    Retraitement de l&apos;Information Traumatique par les Mouvements Oculaires : des
+                    stimulations visuelles et corporelles alternées, dans la lignée de l&apos;EMDR, qui
+                    visent directement le souvenir resté figé.
+                  </p>
+                  <p className="text-emerald-700 text-xs font-semibold mt-5 pt-4 border-t border-emerald-100">
+                    Certifié Lili Ruggieri — 2025
+                  </p>
+                </div>
+              </FadeContent>
+            </div>
+          </div>
+        </section>
+
+        {/* ── PROTOCOLE ── */}
+        <section className="py-20 bg-[#F8F7FF]">
           <div className="max-w-4xl mx-auto px-6">
             <FadeContent>
               <div className="text-center mb-14">
@@ -367,7 +418,7 @@ export default function TraumatismesPage() {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "Jean-Charles Bernard — Hypnothérapeute",
-          "description": "Hypnose et RITMO® pour le traitement des traumatismes à Boussy-Saint-Antoine (91). Spécialisation IFHE hypnose et traumatismes (2026), certifié RITMO®.",
+          "description": "Accompagnement des traumatismes à Boussy-Saint-Antoine (91) : spécialisation IFHE hypnose et traumatismes (2026) et technique RITMO® (2025), deux approches distinctes.",
           "url": "https://jean-charles-bernard.fr/traumatismes",
           "telephone": "+33660811295",
           "email": "jeancharlesbernard3@gmail.com",

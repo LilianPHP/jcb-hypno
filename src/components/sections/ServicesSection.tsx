@@ -69,7 +69,7 @@ const services = [
   {
     icon: HeartHandshake,
     title: 'Spécialisation Traumatismes',
-    desc: 'Retraitement des chocs émotionnels, deuils et événements marquants, sans avoir à tout raconter. Certifié IFHE en hypnose et traumatismes (2026).',
+    desc: 'Protocole d\'hypnose dédié aux chocs émotionnels, deuils et événements marquants, sans avoir à tout raconter. Certifié IFHE en hypnose et traumatismes (2026).',
     badge: '1h · 80€',
   },
   {
