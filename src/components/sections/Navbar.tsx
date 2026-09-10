@@ -10,6 +10,7 @@ const seances = [
   { label: 'Stress & anxiété', href: '/stress-anxiete', desc: 'Retrouver un calme durable' },
   { label: 'Poids & alimentation', href: '/poids-alimentation', desc: 'Grignotage et compulsions' },
   { label: 'Sommeil & insomnie', href: '/sommeil-insomnie', desc: 'Retrouver des nuits réparatrices' },
+  { label: 'Traumatismes', href: '/traumatismes', desc: 'Choc, deuil, passé douloureux — RITMO®' },
 ];
 
 const linksBefore = [{ label: 'Mon approche', href: '/#approche' }];

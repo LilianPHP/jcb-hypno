@@ -15,6 +15,7 @@ const specialites = [
   { label: 'Stress & anxiété', href: '/stress-anxiete' },
   { label: 'Poids & alimentation', href: '/poids-alimentation' },
   { label: 'Sommeil & insomnie', href: '/sommeil-insomnie' },
+  { label: 'Traumatismes', href: '/traumatismes' },
 ];
 
 export default function FooterSection() {

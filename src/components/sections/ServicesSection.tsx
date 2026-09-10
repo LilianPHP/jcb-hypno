@@ -1,6 +1,6 @@
 'use client';
 import FadeContent from '@/components/effects/FadeContent';
-import { MessageSquare, Heart, Clock, Activity, Coffee, Sparkles, Cigarette, Brain, Utensils, Moon, ArrowRight } from 'lucide-react';
+import { MessageSquare, Heart, Clock, Activity, Coffee, Sparkles, Cigarette, Brain, Utensils, Moon, ShieldCheck, ArrowRight } from 'lucide-react';
 
 const motifs = [
   {
@@ -26,6 +26,12 @@ const motifs = [
     title: 'Sommeil & insomnie',
     desc: 'Retrouver l\'endormissement et des nuits enfin réparatrices.',
     href: '/sommeil-insomnie',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Traumatismes',
+    desc: 'Apaiser un choc, un deuil ou un passé qui pèse encore, grâce au RITMO®.',
+    href: '/traumatismes',
   },
 ];
 
@@ -114,13 +120,13 @@ export default function ServicesSection() {
                 Pour quoi consulter&nbsp;?
               </h3>
               <p className="text-slate-500 max-w-2xl mx-auto leading-relaxed">
-                Les quatre demandes les plus fréquentes au cabinet. Chacune a sa page dédiée,
+                Les cinq demandes les plus fréquentes au cabinet. Chacune a sa page dédiée,
                 avec le déroulé de la séance et les réponses aux questions les plus posées.
               </p>
             </div>
           </FadeContent>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {motifs.map((m, i) => (
               <FadeContent key={m.href} delay={i * 0.1}>
                 <a
