@@ -8,23 +8,22 @@ import { serviceJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://jean-charles-bernard.fr'),
-  alternates: { canonical: '/stress-anxiete' },
-  title: 'Hypnose contre le stress et l\'anxiété à Boussy-Saint-Antoine | Jean-Charles Bernard',
-  description: 'Libérez-vous du stress chronique et de l\'anxiété grâce à l\'hypnose à Boussy-Saint-Antoine (91). Jean-Charles Bernard, hypnothérapeute certifié IFHE. 1h · 80€.',
+  alternates: { canonical: '/enfants-adolescents' },
+  title: 'Hypnose pour enfants et adolescents à Boussy-Saint-Antoine | Jean-Charles Bernard',
+  description: 'Anxiété, peurs, confiance en soi, sommeil, stress des examens : l\'hypnose accompagne les enfants et les adolescents à Boussy-Saint-Antoine (91). Hypnothérapeute certifié IFHE. 1h · 80€.',
   keywords: [
-    'hypnose stress anxiété Boussy-Saint-Antoine',
-    'hypnothérapeute anxiété 91',
-    'hypnose stress Essonne',
-    'hypnothérapeute stress Brunoy',
-    'hypnose anxiété Yerres',
-    'gestion stress hypnose Montgeron',
-    'hypnose burn-out Essonne',
-    'anxiété hypnose 91',
-    'hypnose stress anxiété à distance',
+    'hypnose enfant Boussy-Saint-Antoine',
+    'hypnose adolescent Essonne',
+    'hypnothérapeute enfant 91',
+    'hypnose enfant anxiété Brunoy',
+    'hypnose stress examens Yerres',
+    'hypnose confiance en soi adolescent Montgeron',
+    'hypnose enfants Essonne',
+    'hypnose ado 91',
   ],
   openGraph: {
-    title: 'Hypnose contre le stress et l\'anxiété — Boussy-Saint-Antoine',
-    description: 'Hypnothérapeute certifié IFHE · Stress, anxiété, burn-out · 80€ · Boussy-Saint-Antoine (91)',
+    title: 'Hypnose pour enfants et adolescents — Boussy-Saint-Antoine',
+    description: 'Hypnothérapeute certifié IFHE · Anxiété, peurs, confiance en soi, stress des examens · 80€ · Boussy-Saint-Antoine (91)',
     locale: 'fr_FR',
     type: 'website',
   },
@@ -34,22 +33,22 @@ const CALENDLY_URL = 'https://calendly.com/jeancharlesbernard3/seance-1h';
 
 const testimonials = [
   {
-    name: 'Asty Garcia',
-    tag: 'Lâcher-prise',
-    text: 'Après une 1ère séance qui m\'a libérée d\'un mal qui me rongeait depuis des décennies, j\'ai renouvelé foi, de lâcher-prise, respirer et mieux vivre. D\'une réelle aide.',
-    initial: 'A',
+    name: 'Lorena Simoni',
+    tag: 'Bien-être · nov. 2025',
+    text: 'Séance miraculeuse qui m\'a fait beaucoup de bien. Très bienveillant et à l\'écoute, sait nous mettre en confiance.',
+    initial: 'L',
     color: 'bg-indigo-600',
   },
   {
     name: 'Delphine RENARD',
-    tag: 'Confiance en soi',
+    tag: 'Confiance en soi · Google Maps',
     text: 'Son accompagnement ultra efficace m\'a sortie de situations difficiles, m\'a permis de prendre confiance en moi, de grandir, d\'évoluer et m\'épanouir. Un grand merci.',
     initial: 'D',
     color: 'bg-violet-600',
   },
   {
     name: 'Sandra Luce',
-    tag: 'Blocages',
+    tag: 'Blocages · Google Maps',
     text: 'Grâce à lui j\'ai réussi à faire sauter des blocages, à nettoyer des fantômes du passé et surtout à avancer et aller au bout de mes rêves, car ils connaissent le chemin.',
     initial: 'S',
     color: 'bg-emerald-600',
@@ -58,50 +57,50 @@ const testimonials = [
 
 const faqs = [
   {
-    q: 'L\'hypnose est-elle efficace contre le stress et l\'anxiété ?',
-    a: 'Oui — l\'hypnose agit directement sur le système nerveux autonome, responsable des réponses de stress. En induisant un état de relaxation profonde, elle permet de reprogrammer les schémas d\'hypervigilance et les pensées automatiques anxieuses. Les effets sont souvent ressentis dès la 1ère séance.',
+    q: 'À partir de quel âge un enfant peut-il être accompagné ?',
+    a: 'Cela dépend de l\'enfant et de la difficulté. L\'hypnose s\'adapte à l\'âge, avec une approche différente pour un jeune enfant et pour un adolescent. Le plus simple est d\'appeler Jean-Charles pour en parler : il vous dira si l\'accompagnement est adapté.',
   },
   {
-    q: 'Quelle différence entre le stress et l\'anxiété en hypnothérapie ?',
-    a: 'Le stress est souvent une réponse à une situation externe identifiable (surcharge de travail, conflit). L\'anxiété est plus diffuse, parfois sans cause apparente. Jean-Charles adapte l\'approche selon votre profil : travail sur les déclencheurs pour le stress, sur les schémas de pensée pour l\'anxiété généralisée.',
+    q: 'L\'hypnose est-elle sans danger pour un enfant ?',
+    a: 'Oui. L\'hypnose est un état naturel que les enfants traversent spontanément quand ils jouent ou rêvent. L\'enfant reste conscient et ne fait rien contre sa volonté. Elle ne remplace pas pour autant un avis médical en cas de trouble de santé.',
   },
   {
-    q: 'Combien de séances faut-il pour réduire le stress chronique ?',
-    a: 'Beaucoup de patients observent une amélioration significative dès la 1ère séance. Pour un stress chronique ou une anxiété ancienne, un parcours de 2 à 3 séances espacées de quelques semaines donne les meilleurs résultats durables.',
+    q: 'Mon enfant ne veut pas venir. Que faire ?',
+    a: 'Son accord compte : l\'hypnose ne fonctionne pas sous la contrainte. Présentez la séance simplement, comme un moment pour l\'aider avec ce qui le gêne, sans insister. Un adolescent, surtout, doit se sentir libre de son choix.',
   },
   {
-    q: 'L\'hypnose peut-elle aider en cas de burn-out ?',
-    a: 'Oui. L\'hypnose est particulièrement adaptée aux états d\'épuisement émotionnel car elle permet une récupération profonde du système nerveux. Elle aide à identifier les croyances limitantes à l\'origine du burn-out et à reconstruire une relation saine au travail et à soi.',
+    q: 'Combien de séances faut-il ?',
+    a: 'Les enfants et les adolescents évoluent souvent plus vite que les adultes, et peu de séances suffisent fréquemment. Cela dépend bien sûr de la difficulté. Jean-Charles vous en donne une idée après le premier échange.',
   },
   {
-    q: 'Est-ce que je vais perdre le contrôle pendant la séance ?',
-    a: 'Non — contrairement aux idées reçues, l\'hypnose n\'est pas un état de perte de contrôle. Vous restez pleinement conscient, vous entendez tout ce que dit Jean-Charles et vous pouvez sortir de cet état à tout moment. C\'est simplement un état de relaxation intense, similaire à la méditation profonde.',
+    q: 'Mon adolescent est stressé par ses examens. L\'hypnose peut-elle l\'aider ?',
+    a: 'Oui. L\'hypnose aide à gérer le trac, à retrouver de la concentration et à aborder l\'épreuve plus sereinement. Mieux vaut ne pas attendre la veille de l\'examen pour consulter.',
   },
   {
-    q: 'Peut-on faire la séance à distance ?',
-    a: 'Oui. L\'hypnose repose sur la voix et sur la relation, pas sur la présence physique : le travail est le même à distance. Il vous faut simplement un endroit calme où vous ne serez pas dérangé, une connexion correcte et un casque ou des écouteurs. Beaucoup de personnes anxieuses se détendent même plus vite depuis leur propre environnement. Choisissez « Appel téléphonique » au moment de la réservation : Jean-Charles vous appelle sur WhatsApp à l\'heure convenue, en audio ou en visio.',
+    q: 'Comment prendre rendez-vous pour un mineur ?',
+    a: 'Appelez Jean-Charles avant de réserver en ligne : il échange avec vous sur la situation de votre enfant et vous explique comment se déroule la séance.',
   },
 ];
 
 const symptoms = [
-  'Tensions chroniques et maux de tête',
-  'Ruminations et pensées en boucle',
-  'Troubles du sommeil liés au stress',
-  'Sentiment permanent d\'être dépassé',
-  'Irritabilité et sautes d\'humeur',
-  'Anxiété sociale ou généralisée',
-  'Attaques de panique',
-  'Burn-out ou épuisement émotionnel',
+  'Anxiété et inquiétudes',
+  'Stress des examens',
+  'Manque de confiance en soi',
+  'Peurs : le noir, la séparation, les animaux',
+  'Troubles du sommeil, cauchemars',
+  'Timidité, peur du regard des autres',
+  'Rongement des ongles, tics',
+  'Colères et émotions débordantes',
 ];
 
 const steps = [
-  { num: '01', title: 'Évaluation', desc: 'Comprendre vos sources de stress, leur ancienneté, leur impact sur votre vie. Jean-Charles écoute sans jugement.' },
-  { num: '02', title: 'Relaxation profonde', desc: 'Induction d\'un état de calme intense. Votre système nerveux sort du mode "alerte" et entre en mode "récupération".' },
-  { num: '03', title: 'Reprogrammation', desc: 'Travail sur les schémas mentaux qui alimentent le stress. Remplacement des réponses automatiques anxieuses par des ressources internes.' },
-  { num: '04', title: 'Ressources autonomes', desc: 'Techniques d\'auto-hypnose et d\'ancrage pour gérer les pics de stress seul, entre les séances.' },
+  { num: '01', title: 'Faire le point', desc: 'Comprendre la difficulté et son contexte, avec des mots adaptés à l\'âge de l\'enfant.' },
+  { num: '02', title: 'Créer la confiance', desc: 'Prendre le temps de faire connaissance, pour que l\'enfant se sente en sécurité avant tout travail.' },
+  { num: '03', title: 'Passer par l\'imaginaire', desc: 'Histoires, métaphores, visualisations : l\'hypnose emprunte le langage qui parle à l\'enfant.' },
+  { num: '04', title: 'Des outils à emporter', desc: 'Une ressource simple à réutiliser seul : pour s\'endormir, avant un contrôle, face à une peur.' },
 ];
 
-export default function StressAnxietePage() {
+export default function EnfantsAdolescentsPage() {
   return (
     <>
       <Navbar />
@@ -119,14 +118,13 @@ export default function StressAnxietePage() {
                 Boussy-Saint-Antoine · Essonne (91)
               </span>
               <h1 className="font-serif h1-local md:text-5xl lg:text-6xl font-bold text-white leading-tight text-balance mb-6">
-                Libérez-vous du{' '}
-                <span className="text-indigo-400">stress et de l'anxiété</span>{' '}
-                par l'hypnose{' '}
+                L'hypnose pour les{' '}
+                <span className="text-indigo-400">enfants et les adolescents</span>{' '}
                 <span className="whitespace-nowrap">à Boussy-Saint-Antoine</span>
               </h1>
               <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-                Jean-Charles Bernard, hypnothérapeute certifié IFHE à Boussy-Saint-Antoine,
-                vous aide à retrouver un calme durable. <strong className="text-white">1h · 80€ · Résultats dès la 1ère séance.</strong>
+                Très réceptifs à l'hypnose, les enfants et les adolescents mobilisent leur imagination et leur sensibilité, souvent avec des résultats rapides. Jean-Charles Bernard, hypnothérapeute certifié IFHE à Boussy-Saint-Antoine, les accompagne dans un cadre bienveillant.{' '}
+                <strong className="text-white">1h · 80€ · Sans pression.</strong>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -163,14 +161,14 @@ export default function StressAnxietePage() {
               <div className="text-center mb-12">
                 <span className="text-indigo-500 text-xs font-bold uppercase tracking-widest">Vous reconnaissez-vous ?</span>
                 <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1E1B4B] mt-3 mb-4">
-                  Ces symptômes que l'hypnose peut soulager
+                  Ces difficultés que l'hypnose peut accompagner
                 </h2>
               </div>
             </FadeContent>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {symptoms.map((s, i) => (
                 <FadeContent key={s} delay={i * 0.06}>
-                  <div className="flex items-start gap-3 bg-slate-50 border border-slate-100 rounded-xl p-4">
+                  <div className="h-full flex items-start gap-3 bg-slate-50 border border-slate-100 rounded-xl p-4">
                     <span className="w-5 h-5 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" strokeWidth="3"><polyline points="20 6 9 17 4 12"/></svg>
                     </span>
@@ -189,22 +187,21 @@ export default function StressAnxietePage() {
               <div className="text-center mb-14">
                 <span className="text-indigo-500 text-xs font-bold uppercase tracking-widest">La méthode</span>
                 <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1E1B4B] mt-3 mb-4">
-                  Pourquoi l'hypnose agit là où les autres méthodes échouent
+                  Pourquoi l'hypnose réussit si bien aux plus jeunes
                 </h2>
                 <p className="text-slate-500 max-w-2xl mx-auto">
-                  Le stress chronique s'installe dans l'inconscient sous forme de réflexes automatiques.
-                  Seule une approche qui accède à ce niveau peut les modifier durablement.
+                  Un enfant passe naturellement, plusieurs fois par jour, dans cet état d'absorption qu'est l'hypnose : quand il joue, quand il rêve, quand il se raconte une histoire. Pour lui, c'est un langage familier.
                 </p>
               </div>
             </FadeContent>
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { icon: '🧠', title: 'Système nerveux', desc: 'L\'hypnose active le système nerveux parasympathique, l\'exact opposé de la réponse de stress. Le corps apprend à se calmer profondément.' },
-                { icon: '🔄', title: 'Schémas inconscients', desc: 'Les pensées anxieuses sont des habitudes mentales. L\'hypnose les reprogramme à la source, sans effort conscient.' },
-                { icon: '🛠️', title: 'Outils concrets', desc: 'Jean-Charles vous enseigne des techniques d\'auto-hypnose utilisables immédiatement en cas de pic de stress ou d\'angoisse.' },
+                { icon: '🎨', title: 'L\'imagination comme outil', desc: 'Les enfants entrent facilement dans l\'imaginaire. L\'hypnose s\'appuie sur cette capacité pour faire évoluer une peur ou une émotion par la métaphore et le jeu.' },
+                { icon: '🌱', title: 'Des réactions encore souples', desc: 'Chez l\'enfant et l\'adolescent, les réactions sont moins figées qu\'à l\'âge adulte. Elles évoluent souvent plus vite.' },
+                { icon: '🤝', title: 'Un cadre sans pression', desc: 'Pas d\'effort, pas de performance : l\'enfant n\'a rien à réussir. Il est accueilli tel qu\'il est, dans un cadre rassurant.' },
               ].map(({ icon, title, desc }) => (
                 <FadeContent key={title} delay={0.1}>
-                  <div className="bg-white rounded-2xl p-7 border border-slate-100 shadow-sm">
+                  <div className="h-full bg-white rounded-2xl p-7 border border-slate-100 shadow-sm">
                     <div className="text-3xl mb-4">{icon}</div>
                     <h3 className="font-serif text-lg font-bold text-[#1E1B4B] mb-2">{title}</h3>
                     <p className="text-slate-500 text-sm leading-relaxed">{desc}</p>
@@ -222,14 +219,14 @@ export default function StressAnxietePage() {
               <div className="text-center mb-14">
                 <span className="text-indigo-500 text-xs font-bold uppercase tracking-widest">Déroulé</span>
                 <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1E1B4B] mt-3">
-                  La séance hypnose stress & anxiété (1h · 80€)
+                  La séance pour enfants et adolescents (1h · 80€)
                 </h2>
               </div>
             </FadeContent>
             <div className="grid md:grid-cols-2 gap-6">
               {steps.map(({ num, title, desc }, i) => (
                 <FadeContent key={num} delay={i * 0.1}>
-                  <div className="flex gap-5 bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                  <div className="h-full flex gap-5 bg-slate-50 rounded-2xl p-6 border border-slate-100">
                     <div className="text-4xl font-bold text-indigo-200 font-serif leading-none flex-shrink-0">{num}</div>
                     <div>
                       <div className="font-semibold text-[#1E1B4B] mb-1">{title}</div>
@@ -245,7 +242,15 @@ export default function StressAnxietePage() {
                 <p className="text-indigo-800 text-sm leading-relaxed">
                   <strong>Cabinet à Boussy-Saint-Antoine</strong> — 4 Allée Les Marronniers, 91800.
                   Lun–Sam · 9h–20h.<br />
-                  <strong>Séance à distance</strong> également possible : par téléphone ou en visio sur WhatsApp.
+                  Pour un enfant ou un adolescent, <strong>appelez avant de réserver</strong> : Jean-Charles vous expliquera comment se déroule la séance.
+                </p>
+              </div>
+            </FadeContent>
+            <FadeContent delay={0.35}>
+              <div className="mt-4 bg-amber-50 border border-amber-100 rounded-2xl p-6 flex gap-4 items-start">
+                <svg className="text-amber-500 flex-shrink-0 mt-0.5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <p className="text-amber-900 text-sm leading-relaxed">
+                  L'hypnose est un accompagnement complémentaire. Elle ne remplace ni un avis médical, ni un suivi pédiatrique, psychologique ou orthophonique. En cas de trouble diagnostiqué, elle vient en complément, jamais à sa place.
                 </p>
               </div>
             </FadeContent>
@@ -259,7 +264,7 @@ export default function StressAnxietePage() {
               <div className="text-center mb-12">
                 <span className="text-indigo-400 text-xs font-bold uppercase tracking-widest">Témoignages</span>
                 <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mt-3 mb-3">
-                  Ils ont retrouvé la sérénité
+                  Ce que ses patients disent de lui
                 </h2>
                 <div className="flex items-center justify-center gap-2 text-white/40 text-sm">
                   <div className="flex">{[...Array(5)].map((_, i) => <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>)}</div>
@@ -270,14 +275,14 @@ export default function StressAnxietePage() {
             <div className="grid md:grid-cols-3 gap-6">
               {testimonials.map(({ name, tag, text, initial, color }, i) => (
                 <FadeContent key={name} delay={i * 0.1}>
-                  <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+                  <div className="h-full bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
                     <div className="flex">{[...Array(5)].map((_, j) => <svg key={j} width="13" height="13" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>)}</div>
-                    <p className="text-white/70 text-sm leading-relaxed italic">"{text}"</p>
+                    <p className="text-white/70 text-sm leading-relaxed italic">&laquo;&nbsp;{text}&nbsp;&raquo;</p>
                     <div className="flex items-center gap-3 mt-auto">
                       <div className={`w-8 h-8 rounded-full ${color} flex items-center justify-center text-white text-xs font-bold`}>{initial}</div>
                       <div>
                         <div className="text-white text-sm font-medium">{name}</div>
-                        <div className="text-white/40 text-xs">{tag} · Google Maps</div>
+                        <div className="text-white/40 text-xs">{tag}</div>
                       </div>
                     </div>
                   </div>
@@ -294,7 +299,7 @@ export default function StressAnxietePage() {
               <div className="text-center mb-12">
                 <span className="text-indigo-500 text-xs font-bold uppercase tracking-widest">FAQ</span>
                 <h2 className="font-serif text-3xl font-bold text-[#1E1B4B] mt-3">
-                  Vos questions sur l'hypnose et le stress et l'anxiété
+                  Vos questions sur l'hypnose pour les enfants
                 </h2>
               </div>
             </FadeContent>
@@ -319,10 +324,10 @@ export default function StressAnxietePage() {
           <div className="max-w-3xl mx-auto px-6 text-center">
             <FadeContent>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
-                Prêt à retrouver la sérénité ?
+                Envie d'en parler ?
               </h2>
               <p className="text-indigo-200 text-lg mb-8">
-                Réservez votre séance. 1h · 80€ · Au cabinet de Boussy-Saint-Antoine ou à distance.
+                Appelez Jean-Charles ou réservez une séance. 1h · 80€ · Au cabinet de Boussy-Saint-Antoine.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -350,7 +355,7 @@ export default function StressAnxietePage() {
       </main>
       <FooterSection />
 
-      <JsonLd data={serviceJsonLd('/stress-anxiete', "Hypnose contre le stress et l'anxiété à Boussy-Saint-Antoine (91). Hypnothérapeute certifié IFHE, 15 ans d'expérience.")} />
+      <JsonLd data={serviceJsonLd('/enfants-adolescents', "Hypnose pour les enfants et les adolescents à Boussy-Saint-Antoine (91). Hypnothérapeute certifié IFHE, 15 ans d'expérience.")} />
     </>
   );
 }

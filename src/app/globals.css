@@ -147,3 +147,12 @@
   position: relative;
   z-index: 1;
 }
+
+/* ── H1 des pages spécialité ──
+   « à Boussy-Saint-Antoine » fait ~11,3 em et doit tenir d'un seul tenant :
+   à 36px il mesure 407px, pour une colonne mobile de 327px. La taille suit
+   donc la largeur d'écran (colonne = 100vw - 3rem, divisée par 11,8 pour
+   garder ~4 % de marge), de 24px à 36px. md:text-5xl prend le relais à 768px. */
+@utility h1-local {
+  font-size: clamp(1.5rem, calc((100vw - 3rem) / 11.8), 2.25rem);
+}

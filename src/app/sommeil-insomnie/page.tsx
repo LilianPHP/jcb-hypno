@@ -3,7 +3,8 @@ import Link from 'next/link';
 import Navbar from '@/components/sections/Navbar';
 import FooterSection from '@/components/sections/FooterSection';
 import FadeContent from '@/components/effects/FadeContent';
-import Script from 'next/script';
+import JsonLd from '@/components/seo/JsonLd';
+import { serviceJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://jean-charles-bernard.fr'),
@@ -117,10 +118,11 @@ export default function SommeilInsomniePage() {
               <span className="inline-block bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
                 Boussy-Saint-Antoine · Essonne (91)
               </span>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+              <h1 className="font-serif h1-local md:text-5xl lg:text-6xl font-bold text-white leading-tight text-balance mb-6">
                 Retrouvez un{' '}
                 <span className="text-indigo-400">sommeil réparateur</span>{' '}
-                grâce à l'hypnose
+                grâce à l'hypnose{' '}
+                <span className="whitespace-nowrap">à Boussy-Saint-Antoine</span>
               </h1>
               <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
                 Endormissement difficile, réveils nocturnes, mental qui ne s'arrête jamais :
@@ -301,9 +303,9 @@ export default function SommeilInsomniePage() {
           <div className="max-w-3xl mx-auto px-6">
             <FadeContent>
               <div className="text-center mb-12">
-                <span className="text-indigo-500 text-xs font-bold uppercase tracking-widest">Questions fréquentes</span>
+                <span className="text-indigo-500 text-xs font-bold uppercase tracking-widest">FAQ</span>
                 <h2 className="font-serif text-3xl font-bold text-[#1E1B4B] mt-3">
-                  Tout ce que vous voulez savoir
+                  Vos questions sur l'hypnose et le sommeil
                 </h2>
               </div>
             </FadeContent>
@@ -359,31 +361,7 @@ export default function SommeilInsomniePage() {
       </main>
       <FooterSection />
 
-      <Script id="schema-sommeil" type="application/ld+json">{`
-        {
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "Jean-Charles Bernard — Hypnothérapeute",
-          "description": "Hypnose pour le sommeil et l'insomnie à Boussy-Saint-Antoine (91). Hypnothérapeute certifié IFHE, 15 ans d'expérience.",
-          "url": "https://jean-charles-bernard.fr/sommeil-insomnie",
-          "telephone": "+33660811295",
-          "email": "jeancharlesbernard3@gmail.com",
-          "priceRange": "80€",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "4 Allée Les Marronniers",
-            "addressLocality": "Boussy-Saint-Antoine",
-            "postalCode": "91800",
-            "addressCountry": "FR"
-          },
-          "openingHours": "Mo-Sa 09:00-20:00",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "39"
-          }
-        }
-      `}</Script>
+      <JsonLd data={serviceJsonLd('/sommeil-insomnie', "Hypnose pour le sommeil et l'insomnie à Boussy-Saint-Antoine (91). Hypnothérapeute certifié IFHE, 15 ans d'expérience.")} />
     </>
   );
 }

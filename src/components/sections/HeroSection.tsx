@@ -24,18 +24,26 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-20 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left — text */}
         <div className="space-y-8">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 font-semibold text-indigo-200 uppercase text-[11px] tracking-[0.03em] sm:text-xs sm:tracking-wider xl:text-[11px] xl:tracking-[0.02em] xl:whitespace-nowrap">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Hypnothérapeute certifié IFHE · Boussy-Saint-Antoine (91) · Cabinet ou à distance
-          </div>
-
-          <BlurText
-            text="Libérez votre potentiel par l'hypnose"
-            className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight"
-            delay={80}
-            direction="bottom"
-            stepDuration={0.5}
-          />
+          {/* Un seul H1 : le badge porte le métier et la ville, le titre porte la promesse.
+              Balises en span, seul contenu autorisé dans un titre. `font-sans` sur le badge :
+              la base CSS passe tous les h1 en Lora, le badge doit rester en Raleway.
+              `max-sm:leading-[1.65]` : même raison, le h1 impose line-height 1.25 ; au-dessus de sm,
+              text-xs fixe déjà son interligne. */}
+          <h1 className="flex flex-col gap-8">
+            <span className="self-start font-sans max-sm:leading-[1.65] inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 font-semibold text-indigo-200 uppercase text-[11px] tracking-[0.03em] sm:text-xs sm:tracking-wider xl:text-[11px] xl:tracking-[0.02em] xl:whitespace-nowrap">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true" />
+              Hypnothérapeute certifié IFHE · Boussy-Saint-Antoine (91) · Cabinet ou à distance
+            </span>{' '}
+            {/* espace ci-dessus : sépare le badge du titre dans le texte extrait ; invisible en flex */}
+            <BlurText
+              as="span"
+              text="Libérez votre potentiel par l'hypnose"
+              className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight"
+              delay={80}
+              direction="bottom"
+              stepDuration={0.5}
+            />
+          </h1>
 
           <p className="text-white/70 text-lg leading-relaxed max-w-xl">
             En 15 ans de pratique, Jean-Charles Bernard a accompagné des centaines de personnes

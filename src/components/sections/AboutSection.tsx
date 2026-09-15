@@ -2,15 +2,7 @@
 import FadeContent from '@/components/effects/FadeContent';
 import { CheckCircle2, Quote } from 'lucide-react';
 import { trackPhoneClick } from '@/lib/analytics';
-
-const certifications = [
-  'Maître Praticien Hypnose Ericksonienne & PNL — IFHE (2005/2007)',
-  'Praticien Hypnose Classique — IFHE (2014)',
-  'Praticien Hypnose Humaniste & TSA — IFHE (2018)',
-  'Spécialisation Hypnose et Addictions — IFHE (2025)',
-  'Certifié RITMO® — Lili Ruggieri (2025)',
-  'Spécialisation Hypnose et Traumatismes — IFHE (2026)',
-];
+import { CERTIFICATIONS } from '@/lib/certifications';
 
 export default function AboutSection() {
   return (
@@ -69,7 +61,7 @@ export default function AboutSection() {
 
             {/* Certifications */}
             <div className="space-y-3">
-              {certifications.map((cert) => (
+              {CERTIFICATIONS.map((cert) => (
                 <div key={cert} className="flex items-start gap-2.5">
                   <CheckCircle2 size={16} className="text-emerald-500 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-600 text-sm">{cert}</span>
