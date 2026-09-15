@@ -106,10 +106,10 @@ export default function ArretTabacPage() {
               <span className="inline-block bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
                 Boussy-Saint-Antoine · Essonne (91)
               </span>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+              <h1 className="font-serif h1-local md:text-5xl lg:text-6xl font-bold text-white leading-tight text-balance mb-6">
                 Arrêter de fumer grâce à{' '}
                 <span className="text-indigo-400">l'hypnose</span>{' '}
-                à Boussy-Saint-Antoine
+                <span className="whitespace-nowrap">à Boussy-Saint-Antoine</span>
               </h1>
               <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
                 Jean-Charles Bernard, hypnothérapeute certifié IFHE, vous accompagne pour
@@ -265,9 +265,9 @@ export default function ArretTabacPage() {
           <div className="max-w-3xl mx-auto px-6">
             <FadeContent>
               <div className="text-center mb-12">
-                <span className="text-indigo-500 text-xs font-bold uppercase tracking-widest">Questions fréquentes</span>
+                <span className="text-indigo-500 text-xs font-bold uppercase tracking-widest">FAQ</span>
                 <h2 className="font-serif text-3xl font-bold text-[#1E1B4B] mt-3">
-                  Tout ce que vous voulez savoir
+                  Vos questions sur l'hypnose et l'arrêt du tabac
                 </h2>
               </div>
             </FadeContent>

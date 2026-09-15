@@ -159,9 +159,9 @@ export default function ServicesSection() {
           <FadeContent>
             <div className="text-center mb-10">
               <span className="text-indigo-600 text-xs font-bold uppercase tracking-widest">Motifs de consultation</span>
-              <h3 className="font-serif text-3xl lg:text-4xl font-bold text-slate-900 mt-3 mb-4">
+              <h2 className="font-serif text-3xl lg:text-4xl font-bold text-slate-900 mt-3 mb-4">
                 Pour quoi consulter&nbsp;?
-              </h3>
+              </h2>
               <p className="text-slate-500 max-w-2xl mx-auto leading-relaxed">
                 Les cinq demandes les plus fréquentes au cabinet. Chacune a sa page dédiée,
                 avec le déroulé de la séance et les réponses aux questions les plus posées.
@@ -179,7 +179,7 @@ export default function ServicesSection() {
                   <div className="w-11 h-11 rounded-xl bg-indigo-50 flex items-center justify-center mb-4 group-hover:bg-indigo-100 transition-colors">
                     <m.icon size={20} className="text-indigo-600" />
                   </div>
-                  <h4 className="font-serif text-base font-bold text-slate-900 mb-2 leading-snug">{m.title}</h4>
+                  <h3 className="font-serif text-base font-bold text-slate-900 mb-2 leading-snug">{m.title}</h3>
                   <p className="text-slate-500 text-sm leading-relaxed flex-1">{m.desc}</p>
                   <span className="mt-4 pt-3 border-t border-slate-100 inline-flex items-center gap-1.5 text-indigo-600 text-sm font-semibold">
                     En savoir plus
