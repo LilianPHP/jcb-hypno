@@ -3,7 +3,8 @@ import Link from 'next/link';
 import Navbar from '@/components/sections/Navbar';
 import FooterSection from '@/components/sections/FooterSection';
 import FadeContent from '@/components/effects/FadeContent';
-import Script from 'next/script';
+import JsonLd from '@/components/seo/JsonLd';
+import { serviceJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://jean-charles-bernard.fr'),
@@ -363,31 +364,7 @@ export default function TraumatismesPage() {
       </main>
       <FooterSection />
 
-      <Script id="schema-traumatismes" type="application/ld+json">{`
-        {
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "Jean-Charles Bernard — Hypnothérapeute",
-          "description": "Accompagnement des traumatismes à Boussy-Saint-Antoine (91) : spécialisation IFHE hypnose et traumatismes (2026) et technique RITMO® (2025), deux approches distinctes.",
-          "url": "https://jean-charles-bernard.fr/traumatismes",
-          "telephone": "+33660811295",
-          "email": "jeancharlesbernard3@gmail.com",
-          "priceRange": "80€",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "4 Allée Les Marronniers",
-            "addressLocality": "Boussy-Saint-Antoine",
-            "postalCode": "91800",
-            "addressCountry": "FR"
-          },
-          "openingHours": "Mo-Sa 09:00-20:00",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "39"
-          }
-        }
-      `}</Script>
+      <JsonLd data={serviceJsonLd('/traumatismes', "Accompagnement des traumatismes à Boussy-Saint-Antoine (91) : spécialisation IFHE hypnose et traumatismes (2026) et technique RITMO® (2025), deux approches distinctes.")} />
     </>
   );
 }

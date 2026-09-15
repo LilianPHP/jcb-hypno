@@ -1,8 +1,9 @@
 'use client';
 import FadeContent from '@/components/effects/FadeContent';
-import { MessageSquare, Heart, Clock, Activity, Coffee, Sparkles, Cigarette, Brain, Utensils, Moon, ShieldCheck, HeartHandshake, AlertTriangle, RefreshCw, Users, ArrowRight } from 'lucide-react';
+import { MessageSquare, Heart, Clock, Activity, Coffee, Sparkles, HeartHandshake } from 'lucide-react';
 
-// 4 méthodes → grille de 4. 3 spécialisations → grille de 3. 8 motifs → grille de 4 (4 + 4).
+// 4 méthodes → grille de 4. 3 spécialisations → grille de 3.
+// Les motifs de consultation sont dans ProblemsSection (bloc unique de 8).
 // Chaque grille est complète : jamais de dernière rangée incomplète.
 
 const methodes = [
@@ -46,57 +47,6 @@ const specialisations = [
     title: 'RITMO®',
     desc: 'Retraitement de l\'Information Traumatique par les Mouvements Oculaires. Stimulations visuelles et corporelles, inspiré de l\'EMDR.',
     certif: 'Certifié Lili Ruggieri — 2025',
-  },
-];
-
-const motifs = [
-  {
-    icon: Cigarette,
-    title: 'Arrêt du tabac',
-    desc: 'Se libérer de la cigarette, sans substitut ni prise de poids.',
-    href: '/arret-tabac',
-  },
-  {
-    icon: Brain,
-    title: 'Stress & anxiété',
-    desc: 'Apaiser un mental qui ne s\'arrête jamais.',
-    href: '/stress-anxiete',
-  },
-  {
-    icon: Utensils,
-    title: 'Poids & alimentation',
-    desc: 'Sortir du grignotage et des compulsions.',
-    href: '/poids-alimentation',
-  },
-  {
-    icon: Moon,
-    title: 'Sommeil & insomnie',
-    desc: 'Retrouver des nuits enfin réparatrices.',
-    href: '/sommeil-insomnie',
-  },
-  {
-    icon: AlertTriangle,
-    title: 'Phobies & peurs',
-    desc: 'Avion, espaces clos, regard des autres.',
-    href: '/phobies',
-  },
-  {
-    icon: RefreshCw,
-    title: 'Schémas répétitifs',
-    desc: 'Sortir de ce qui se répète malgré vous.',
-    href: '/schemas-repetitifs',
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Traumatismes',
-    desc: 'Apaiser un choc, un deuil, un passé qui pèse.',
-    href: '/traumatismes',
-  },
-  {
-    icon: Users,
-    title: 'Enfants & adolescents',
-    desc: 'Un accompagnement adapté à leur âge.',
-    href: '/enfants-adolescents',
   },
 ];
 
@@ -170,43 +120,6 @@ export default function ServicesSection() {
               </div>
             </FadeContent>
           ))}
-        </div>
-
-        {/* Motifs de consultation — grille de 4 */}
-        <div className="mt-20">
-          <FadeContent>
-            <div className="text-center mb-10">
-              <span className="text-indigo-600 text-xs font-bold uppercase tracking-widest">Motifs de consultation</span>
-              <h2 className="font-serif text-3xl lg:text-4xl font-bold text-slate-900 mt-3 mb-4">
-                Pour quoi consulter&nbsp;?
-              </h2>
-              <p className="text-slate-500 max-w-2xl mx-auto leading-relaxed">
-                Les demandes les plus fréquentes au cabinet. Chacune a sa page dédiée,
-                avec le déroulé de la séance et les réponses aux questions les plus posées.
-              </p>
-            </div>
-          </FadeContent>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {motifs.map((m, i) => (
-              <FadeContent key={m.href} delay={i * 0.08}>
-                <a
-                  href={m.href}
-                  className="group h-full bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-200 transition-all duration-300 flex flex-col"
-                >
-                  <div className="w-11 h-11 rounded-xl bg-indigo-50 flex items-center justify-center mb-4 group-hover:bg-indigo-100 transition-colors">
-                    <m.icon size={20} className="text-indigo-600" />
-                  </div>
-                  <h3 className="font-serif text-base font-bold text-slate-900 mb-2 leading-snug">{m.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed flex-1">{m.desc}</p>
-                  <span className="mt-4 pt-3 border-t border-slate-100 inline-flex items-center gap-1.5 text-indigo-600 text-sm font-semibold">
-                    En savoir plus
-                    <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
-                  </span>
-                </a>
-              </FadeContent>
-            ))}
-          </div>
         </div>
       </div>
     </section>

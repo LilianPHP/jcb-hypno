@@ -6,6 +6,8 @@ import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import AboutSection from '@/components/sections/AboutSection';
 import BookingSection from '@/components/sections/BookingSection';
 import FooterSection from '@/components/sections/FooterSection';
+import JsonLd from '@/components/seo/JsonLd';
+import { homeJsonLd } from '@/lib/schema';
 
 export default function Home() {
   return (
@@ -20,6 +22,7 @@ export default function Home() {
         <BookingSection />
       </main>
       <FooterSection />
+      <JsonLd data={homeJsonLd()} />
     </>
   );
 }

@@ -3,7 +3,8 @@ import Link from 'next/link';
 import Navbar from '@/components/sections/Navbar';
 import FooterSection from '@/components/sections/FooterSection';
 import FadeContent from '@/components/effects/FadeContent';
-import Script from 'next/script';
+import JsonLd from '@/components/seo/JsonLd';
+import { serviceJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://jean-charles-bernard.fr'),
@@ -349,31 +350,7 @@ export default function StressAnxietePage() {
       </main>
       <FooterSection />
 
-      <Script id="schema-stress" type="application/ld+json">{`
-        {
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "Jean-Charles Bernard — Hypnothérapeute",
-          "description": "Hypnose contre le stress et l'anxiété à Boussy-Saint-Antoine (91). Hypnothérapeute certifié IFHE, 15 ans d'expérience.",
-          "url": "https://jean-charles-bernard.fr/stress-anxiete",
-          "telephone": "+33660811295",
-          "email": "jeancharlesbernard3@gmail.com",
-          "priceRange": "80€",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "4 Allée Les Marronniers",
-            "addressLocality": "Boussy-Saint-Antoine",
-            "postalCode": "91800",
-            "addressCountry": "FR"
-          },
-          "openingHours": "Mo-Sa 09:00-20:00",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "39"
-          }
-        }
-      `}</Script>
+      <JsonLd data={serviceJsonLd('/stress-anxiete', "Hypnose contre le stress et l'anxiété à Boussy-Saint-Antoine (91). Hypnothérapeute certifié IFHE, 15 ans d'expérience.")} />
     </>
   );
 }
