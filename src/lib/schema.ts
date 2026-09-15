@@ -37,6 +37,30 @@ const coordonnees = {
   email: 'jeancharlesbernard3@gmail.com',
 };
 
+const horaires = {
+  '@type': 'OpeningHoursSpecification',
+  dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+  opens: '09:00',
+  closes: '20:00',
+};
+
+/**
+ * Le cabinet, tel que déclaré partout : entité de l'accueil et fournisseur des
+ * pages de spécialité. Un seul objet, sinon le fournisseur perd des champs — le
+ * test des résultats enrichis signalait priceRange et image manquants.
+ */
+const cabinet = {
+  '@type': 'LocalBusiness',
+  '@id': CABINET_ID,
+  name: NOM,
+  url: SITE_URL,
+  image: PORTRAIT,
+  ...coordonnees,
+  priceRange: `${PRIX}€`,
+  address: adresse,
+  openingHoursSpecification: horaires,
+};
+
 /** Les 8 pages de spécialité, dans l'ordre du menu. */
 export const SERVICES = [
   { path: '/arret-tabac', name: 'Hypnose pour arrêter de fumer' },
@@ -64,22 +88,9 @@ export function homeJsonLd() {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'LocalBusiness',
-        '@id': CABINET_ID,
-        name: NOM,
+        ...cabinet,
         description:
           "Jean-Charles Bernard, hypnothérapeute diplômé IFHE à Boussy-Saint-Antoine (91), en cabinet ou à distance. Hypnose ericksonienne, humaniste, RITMO®, PNL. 15 ans d'expérience.",
-        url: SITE_URL,
-        image: PORTRAIT,
-        ...coordonnees,
-        priceRange: `${PRIX}€`,
-        address: adresse,
-        openingHoursSpecification: {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-          opens: '09:00',
-          closes: '20:00',
-        },
         founder: { '@id': PRATICIEN_ID },
         sameAs: ['https://www.pagesjaunes.fr/pros/55730097'],
         hasOfferCatalog: {
@@ -119,8 +130,8 @@ export function homeJsonLd() {
 
 /**
  * Page de spécialité : un Service rattaché au cabinet. Le fournisseur reprend
- * nom, adresse et téléphone pour rester lisible seul — Google ne résout pas
- * toujours un @id d'une page à l'autre.
+ * le cabinet complet pour rester lisible seul — Google ne résout pas toujours
+ * un @id d'une page à l'autre.
  */
 export function serviceJsonLd(path: ServicePath, description: string) {
   const { name } = SERVICES.find((s) => s.path === path)!;
@@ -133,14 +144,7 @@ export function serviceJsonLd(path: ServicePath, description: string) {
     description,
     url,
     serviceType: 'Hypnothérapie',
-    provider: {
-      '@type': 'LocalBusiness',
-      '@id': CABINET_ID,
-      name: NOM,
-      url: SITE_URL,
-      ...coordonnees,
-      address: adresse,
-    },
+    provider: cabinet,
     offers: offre(url),
   };
 }
