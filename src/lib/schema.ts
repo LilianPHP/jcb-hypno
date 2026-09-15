@@ -1,4 +1,5 @@
 import { CERTIFICATIONS } from '@/lib/certifications';
+import { FAQ_ACCUEIL } from '@/lib/faq-accueil';
 
 /**
  * Schema.org du site — source unique.
@@ -123,6 +124,17 @@ export function homeJsonLd() {
         name: NOM,
         inLanguage: 'fr-FR',
         publisher: { '@id': CABINET_ID },
+      },
+      {
+        // Aide Google à lire la page. Pas de résultat enrichi à attendre : Google
+        // réserve l'affichage FAQ aux sites gouvernementaux et de santé reconnus.
+        '@type': 'FAQPage',
+        '@id': `${SITE_URL}/#faq`,
+        mainEntity: FAQ_ACCUEIL.map(({ q, a }) => ({
+          '@type': 'Question',
+          name: q,
+          acceptedAnswer: { '@type': 'Answer', text: a },
+        })),
       },
     ],
   };
