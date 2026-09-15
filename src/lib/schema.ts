@@ -83,6 +83,24 @@ const offre = (url: string) => ({
   url,
 });
 
+/** Une question de FAQ, telle qu'affichée : la même donnée alimente le Schema.org. */
+export type Faq = { readonly q: string; readonly a: string };
+
+/**
+ * FAQPage d'une page. Aide Google à lire les couples question-réponse. Pas de
+ * résultat enrichi à attendre : Google réserve l'affichage FAQ aux sites
+ * gouvernementaux et de santé reconnus.
+ */
+const faqPage = (id: string, faqs: readonly Faq[]) => ({
+  '@type': 'FAQPage',
+  '@id': id,
+  mainEntity: faqs.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
+});
+
 /** Accueil : le cabinet, le praticien et le site, reliés entre eux par @id. */
 export function homeJsonLd() {
   return {
@@ -125,38 +143,33 @@ export function homeJsonLd() {
         inLanguage: 'fr-FR',
         publisher: { '@id': CABINET_ID },
       },
-      {
-        // Aide Google à lire la page. Pas de résultat enrichi à attendre : Google
-        // réserve l'affichage FAQ aux sites gouvernementaux et de santé reconnus.
-        '@type': 'FAQPage',
-        '@id': `${SITE_URL}/#faq`,
-        mainEntity: FAQ_ACCUEIL.map(({ q, a }) => ({
-          '@type': 'Question',
-          name: q,
-          acceptedAnswer: { '@type': 'Answer', text: a },
-        })),
-      },
+      faqPage(`${SITE_URL}/#faq`, FAQ_ACCUEIL),
     ],
   };
 }
 
 /**
- * Page de spécialité : un Service rattaché au cabinet. Le fournisseur reprend
+ * Page de spécialité : un Service rattaché au cabinet, et la FAQ de la page. Le fournisseur reprend
  * le cabinet complet pour rester lisible seul — Google ne résout pas toujours
  * un @id d'une page à l'autre.
  */
-export function serviceJsonLd(path: ServicePath, description: string) {
+export function serviceJsonLd(path: ServicePath, description: string, faqs: readonly Faq[]) {
   const { name } = SERVICES.find((s) => s.path === path)!;
   const url = `${SITE_URL}${path}`;
   return {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    '@id': `${url}#service`,
-    name,
-    description,
-    url,
-    serviceType: 'Hypnothérapie',
-    provider: cabinet,
-    offers: offre(url),
+    '@graph': [
+      {
+        '@type': 'Service',
+        '@id': `${url}#service`,
+        name,
+        description,
+        url,
+        serviceType: 'Hypnothérapie',
+        provider: cabinet,
+        offers: offre(url),
+      },
+      faqPage(`${url}#faq`, faqs),
+    ],
   };
 }
