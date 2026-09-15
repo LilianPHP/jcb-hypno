@@ -1,8 +1,8 @@
 'use client';
 import FadeContent from '@/components/effects/FadeContent';
-import { MessageSquare, Heart, Clock, Activity, Coffee, Sparkles, Cigarette, Brain, Utensils, Moon, ShieldCheck, HeartHandshake, ArrowRight } from 'lucide-react';
+import { MessageSquare, Heart, Clock, Activity, Coffee, Sparkles, Cigarette, Brain, Utensils, Moon, ShieldCheck, HeartHandshake, AlertTriangle, RefreshCw, Users, ArrowRight } from 'lucide-react';
 
-// 4 méthodes → grille de 4. 3 spécialisations → grille de 3. 5 motifs → grille de 5.
+// 4 méthodes → grille de 4. 3 spécialisations → grille de 3. 8 motifs → grille de 4 (4 + 4).
 // Chaque grille est complète : jamais de dernière rangée incomplète.
 
 const methodes = [
@@ -75,10 +75,28 @@ const motifs = [
     href: '/sommeil-insomnie',
   },
   {
+    icon: AlertTriangle,
+    title: 'Phobies & peurs',
+    desc: 'Avion, espaces clos, regard des autres.',
+    href: '/phobies',
+  },
+  {
+    icon: RefreshCw,
+    title: 'Schémas répétitifs',
+    desc: 'Sortir de ce qui se répète malgré vous.',
+    href: '/schemas-repetitifs',
+  },
+  {
     icon: ShieldCheck,
     title: 'Traumatismes',
     desc: 'Apaiser un choc, un deuil, un passé qui pèse.',
     href: '/traumatismes',
+  },
+  {
+    icon: Users,
+    title: 'Enfants & adolescents',
+    desc: 'Un accompagnement adapté à leur âge.',
+    href: '/enfants-adolescents',
   },
 ];
 
@@ -154,7 +172,7 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        {/* Motifs de consultation — grille de 5 */}
+        {/* Motifs de consultation — grille de 4 */}
         <div className="mt-20">
           <FadeContent>
             <div className="text-center mb-10">
@@ -163,13 +181,13 @@ export default function ServicesSection() {
                 Pour quoi consulter&nbsp;?
               </h2>
               <p className="text-slate-500 max-w-2xl mx-auto leading-relaxed">
-                Les cinq demandes les plus fréquentes au cabinet. Chacune a sa page dédiée,
+                Les demandes les plus fréquentes au cabinet. Chacune a sa page dédiée,
                 avec le déroulé de la séance et les réponses aux questions les plus posées.
               </p>
             </div>
           </FadeContent>
 
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {motifs.map((m, i) => (
               <FadeContent key={m.href} delay={i * 0.08}>
                 <a

@@ -10,7 +10,10 @@ const seances = [
   { label: 'Stress & anxiété', href: '/stress-anxiete', desc: 'Retrouver un calme durable' },
   { label: 'Poids & alimentation', href: '/poids-alimentation', desc: 'Grignotage et compulsions' },
   { label: 'Sommeil & insomnie', href: '/sommeil-insomnie', desc: 'Retrouver des nuits réparatrices' },
-  { label: 'Traumatismes', href: '/traumatismes', desc: 'Choc, deuil, passé douloureux — RITMO®' },
+  { label: 'Phobies & peurs', href: '/phobies', desc: 'Avion, espaces clos, regard des autres' },
+  { label: 'Schémas répétitifs', href: '/schemas-repetitifs', desc: 'Ce qui se répète malgré vous' },
+  { label: 'Traumatismes', href: '/traumatismes', desc: 'Choc, deuil, passé douloureux' },
+  { label: 'Enfants & adolescents', href: '/enfants-adolescents', desc: 'Un accompagnement adapté à leur âge' },
 ];
 
 const linksBefore = [{ label: 'Mon approche', href: '/#approche' }];
@@ -65,17 +68,24 @@ export default function Navbar() {
             </button>
             {/* invisible bridge so the pointer can travel to the panel */}
             <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible translate-y-1 transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0">
-              <div className="w-72 bg-white rounded-2xl shadow-xl border border-slate-100 p-2">
-                {seances.map(s => (
-                  <a
-                    key={s.href}
-                    href={s.href}
-                    className="block px-4 py-3 rounded-xl hover:bg-slate-50 transition-colors"
-                  >
-                    <div className="text-sm font-semibold text-slate-800">{s.label}</div>
-                    <div className="text-xs text-slate-400 mt-0.5">{s.desc}</div>
-                  </a>
-                ))}
+              {/* « Séances & tarifs » en tête, puis les 8 motifs en 2 colonnes (4 × 2) */}
+              <div className="w-[34rem] bg-white rounded-2xl shadow-xl border border-slate-100 p-2">
+                <a href={seances[0].href} className="block px-4 py-3 rounded-xl hover:bg-slate-50 transition-colors">
+                  <div className="text-sm font-semibold text-slate-800">{seances[0].label}</div>
+                  <div className="text-xs text-slate-400 mt-0.5">{seances[0].desc}</div>
+                </a>
+                <div className="grid grid-cols-2 mt-1 pt-1 border-t border-slate-100">
+                  {seances.slice(1).map(s => (
+                    <a
+                      key={s.href}
+                      href={s.href}
+                      className="block px-4 py-3 rounded-xl hover:bg-slate-50 transition-colors"
+                    >
+                      <div className="text-sm font-semibold text-slate-800">{s.label}</div>
+                      <div className="text-xs text-slate-400 mt-0.5">{s.desc}</div>
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </li>

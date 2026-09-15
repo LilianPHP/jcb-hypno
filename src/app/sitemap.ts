@@ -15,12 +15,15 @@ const BASE_URL = 'https://jean-charles-bernard.fr';
  * finit par ignorer un lastmod qui crie au loup.
  */
 const pages: { path: string; lastModified: string; priority: number }[] = [
-  { path: '', lastModified: '2026-09-10', priority: 1.0 },
-  { path: '/arret-tabac', lastModified: '2026-09-09', priority: 0.9 },
-  { path: '/stress-anxiete', lastModified: '2026-09-09', priority: 0.9 },
-  { path: '/poids-alimentation', lastModified: '2026-09-09', priority: 0.9 },
-  { path: '/sommeil-insomnie', lastModified: '2026-09-09', priority: 0.9 },
-  { path: '/traumatismes', lastModified: '2026-09-10', priority: 0.9 },
+  { path: '', lastModified: '2026-09-15', priority: 1.0 },
+  { path: '/arret-tabac', lastModified: '2026-09-15', priority: 0.9 },
+  { path: '/stress-anxiete', lastModified: '2026-09-15', priority: 0.9 },
+  { path: '/poids-alimentation', lastModified: '2026-09-15', priority: 0.9 },
+  { path: '/sommeil-insomnie', lastModified: '2026-09-15', priority: 0.9 },
+  { path: '/phobies', lastModified: '2026-09-15', priority: 0.9 },
+  { path: '/schemas-repetitifs', lastModified: '2026-09-15', priority: 0.9 },
+  { path: '/traumatismes', lastModified: '2026-09-15', priority: 0.9 },
+  { path: '/enfants-adolescents', lastModified: '2026-09-15', priority: 0.9 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
