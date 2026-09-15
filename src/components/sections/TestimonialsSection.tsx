@@ -52,7 +52,7 @@ const reviews = [
 const stats = [
   { value: 15, suffix: '+', label: 'ans de pratique' },
   { value: 6, suffix: '', label: 'méthodes maîtrisées' },
-  { value: 38, suffix: '', label: 'avis 5 étoiles' },
+  { value: 39, suffix: '', label: 'avis 5 étoiles' },
   { value: 80, suffix: '€', label: 'la séance de 1h' },
 ];
 
@@ -82,7 +82,7 @@ export default function TestimonialsSection() {
                 {[...Array(5)].map((_, i) => <Star key={i} size={13} className="fill-amber-400 text-amber-400" />)}
               </div>
               <span className="font-bold text-slate-800 text-sm">5,0</span>
-              <span className="text-slate-400 text-sm">· 38 avis</span>
+              <span className="text-slate-400 text-sm">· 39 avis</span>
               <a
                 href="https://www.google.com/maps/place/Jean-charles+BERNARD+hypnotherapeute/@48.6979254,2.5383264,17z/data=!3m1!4b1!4m6!3m5!1s0x47e6090c5ea6e751:0x7466afd974632979!8m2!3d48.6979219!4d2.5409013!16s%2Fg%2F11j2zdm8ld?entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"

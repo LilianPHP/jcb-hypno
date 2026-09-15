@@ -1,7 +1,7 @@
 'use client';
 /* eslint-disable react/no-unknown-property */
 import dynamic from 'next/dynamic';
-import { forwardRef, useRef, useMemo, useLayoutEffect } from 'react';
+import { useRef, useMemo, useLayoutEffect, useEffect, useState } from 'react';
 import { Color } from 'three';
 
 // Dynamically import Canvas to avoid SSR issues
@@ -104,10 +104,28 @@ interface SilkProps {
   rotation?: number;
 }
 
+/**
+ * Performance : rendu en résolution 1x (motif flou, la haute densité ne se voit
+ * pas et coûte 4x plus de pixels) et animation arrêtée dès que le fond sort de
+ * l'écran — sinon le GPU calcule le shader en permanence pendant toute la visite.
+ */
 export default function Silk(props: SilkProps) {
+  const wrapper = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const el = wrapper.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([entry]) => setVisible(entry.isIntersecting));
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   return (
-    <Canvas dpr={[1, 2]} frameloop="always">
-      <SilkInner {...props} />
-    </Canvas>
+    <div ref={wrapper} className="h-full w-full">
+      <Canvas dpr={1} frameloop={visible ? 'always' : 'never'}>
+        <SilkInner {...props} />
+      </Canvas>
+    </div>
   );
 }

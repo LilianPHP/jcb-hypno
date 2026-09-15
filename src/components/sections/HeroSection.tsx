@@ -1,20 +1,37 @@
 'use client';
 import dynamic from 'next/dynamic';
-import { useState } from 'react';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import BlurText from '@/components/effects/BlurText';
 import Magnet from '@/components/effects/Magnet';
 import { ArrowRight, Star } from 'lucide-react';
+import portrait from '../../../public/images/jc-portrait.jpg';
 
 const Silk = dynamic(() => import('@/components/effects/Silk'), { ssr: false });
 
 export default function HeroSection() {
   const [imgError, setImgError] = useState(false);
+  // Le fond WebGL (three.js) n'est chargé qu'une fois la page au repos : il ne
+  // pèse plus sur le chargement ni sur l'interactivité. Rien pour
+  // prefers-reduced-motion : le dégradé seul suffit.
+  const [showSilk, setShowSilk] = useState(false);
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const start = () => setShowSilk(true);
+    if ('requestIdleCallback' in window) {
+      const id = window.requestIdleCallback(start, { timeout: 3000 });
+      return () => window.cancelIdleCallback(id);
+    }
+    const id = setTimeout(start, 1500);
+    return () => clearTimeout(id);
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0f0c29]">
       {/* Silk WebGL background */}
-      <div className="absolute inset-0 opacity-80">
-        <Silk color="#312e81" speed={3} scale={1.2} noiseIntensity={1.2} rotation={0.3} />
+      <div className={`absolute inset-0 transition-opacity duration-1000 ${showSilk ? 'opacity-80' : 'opacity-0'}`}>
+        {showSilk && <Silk color="#312e81" speed={3} scale={1.2} noiseIntensity={1.2} rotation={0.3} />}
       </div>
 
       {/* Indigo gradient overlay */}
@@ -56,7 +73,7 @@ export default function HeroSection() {
               {[...Array(5)].map((_, i) => <Star key={i} size={16} className="fill-amber-400 text-amber-400" />)}
             </div>
             <span className="text-white/90 text-sm font-semibold">5,0</span>
-            <span className="text-white/50 text-sm">· 38 avis Google vérifiés</span>
+            <span className="text-white/50 text-sm">· 39 avis Google vérifiés</span>
           </div>
 
           {/* CTAs */}
@@ -90,10 +107,14 @@ export default function HeroSection() {
                   <div className="w-24 h-24 rounded-full bg-white/10 flex items-center justify-center text-4xl font-serif font-bold text-white/80">JC</div>
                 </div>
               ) : (
-                <img
-                  src="/images/jc-portrait.jpg"
-                  alt="Jean-Charles Bernard, Hypnothérapeute"
-                  className="w-full h-full object-cover object-top"
+                <Image
+                  src={portrait}
+                  alt="Jean-Charles Bernard, hypnothérapeute"
+                  fill
+                  sizes="320px"
+                  loading="eager"
+                  fetchPriority="high"
+                  className="object-cover object-top"
                   onError={() => setImgError(true)}
                 />
               )}

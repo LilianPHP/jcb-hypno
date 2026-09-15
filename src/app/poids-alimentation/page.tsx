@@ -1,32 +1,25 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '@/components/sections/Navbar';
 import FooterSection from '@/components/sections/FooterSection';
 import FadeContent from '@/components/effects/FadeContent';
 import JsonLd from '@/components/seo/JsonLd';
 import { serviceJsonLd } from '@/lib/schema';
+import { OG_IMAGES } from '@/lib/seo';
+import photoBureau from '../../../public/images/photo_bureau.jpg';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://jean-charles-bernard.fr'),
   alternates: { canonical: '/poids-alimentation' },
-  title: 'Hypnose perte de poids et rapport à l\'alimentation à Boussy-Saint-Antoine | Jean-Charles Bernard',
-  description: 'Grignotage, compulsions, alimentation émotionnelle : retrouvez un rapport apaisé à la nourriture grâce à l\'hypnose à Boussy-Saint-Antoine (91). Hypnothérapeute certifié IFHE. 1h · 80€.',
-  keywords: [
-    'hypnose perte de poids Boussy-Saint-Antoine',
-    'hypnose maigrir Essonne',
-    'hypnose alimentation émotionnelle 91',
-    'hypnose grignotage Brunoy',
-    'compulsions alimentaires hypnose Yerres',
-    'hypnothérapeute poids Montgeron',
-    'hypnose sucre Essonne',
-    'rapport à la nourriture hypnose 91',
-    'hypnose alimentation à distance',
-  ],
+  title: "Hypnose perte de poids à Boussy-Saint-Antoine (91)",
+  description: "Grignotage, compulsions, alimentation émotionnelle : l'hypnose à Boussy-Saint-Antoine (91) ou à distance. Hypnothérapeute certifié IFHE. 1h, 80 €.",
   openGraph: {
     title: 'Hypnose poids & alimentation — Boussy-Saint-Antoine',
     description: 'Hypnothérapeute certifié IFHE · Grignotage, compulsions, alimentation émotionnelle · 80€ · Boussy-Saint-Antoine (91)',
     locale: 'fr_FR',
     type: 'website',
+    images: OG_IMAGES,
   },
 };
 
@@ -241,13 +234,21 @@ export default function PoidsAlimentationPage() {
               ))}
             </div>
             <FadeContent delay={0.3}>
-              <div className="mt-8 bg-indigo-50 border border-indigo-100 rounded-2xl p-6 flex gap-4 items-start">
-                <svg className="text-indigo-500 flex-shrink-0 mt-0.5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                <p className="text-indigo-800 text-sm leading-relaxed">
-                  <strong>Cabinet à Boussy-Saint-Antoine</strong> — 4 Allée Les Marronniers, 91800.
-                  Lun–Sam · 9h–20h.<br />
-                  <strong>Séance à distance</strong> également possible : par téléphone ou en visio sur WhatsApp.
-                </p>
+              <div className="mt-8 bg-indigo-50 border border-indigo-100 rounded-2xl overflow-hidden flex flex-col sm:flex-row">
+                <Image
+                  src={photoBureau}
+                  alt="Jean-Charles Bernard, hypnothérapeute, à son bureau devant ses diplômes de l'IFHE"
+                  sizes="(min-width: 640px) 224px, 100vw"
+                  className="w-full sm:w-56 shrink-0 h-56 sm:h-auto object-cover object-[35%_45%]"
+                />
+                <div className="p-6 flex gap-4 items-start">
+                  <svg className="text-indigo-500 flex-shrink-0 mt-0.5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  <p className="text-indigo-800 text-sm leading-relaxed">
+                    <strong>Cabinet à Boussy-Saint-Antoine</strong> — 4 Allée Les Marronniers, 91800.
+                    Lun–Sam · 9h–20h.<br />
+                    <strong>Séance à distance</strong> également possible : par téléphone ou en visio sur WhatsApp.
+                  </p>
+                </div>
               </div>
             </FadeContent>
             <FadeContent delay={0.35}>
