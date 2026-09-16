@@ -15,8 +15,9 @@ export const metadata: Metadata = {
  * fournir. Tant qu'une valeur est vide, la page l'affiche en jaune.
  */
 const A_COMPLETER = {
-  statut: '', // ex. « Entrepreneur individuel »
-  siret: '',
+  // Certificat d'inscription au répertoire SIRENE (INSEE), transmis le 16/09/2026.
+  statut: 'Entrepreneur individuel',
+  siret: '512 656 679 00044',
   mediateur: '', // médiateur de la consommation : nom et site
   conservationGa4: '', // durée de conservation réglée dans la propriété GA4
 };
