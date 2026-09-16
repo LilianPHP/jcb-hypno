@@ -5,7 +5,7 @@ import Navbar from '@/components/sections/Navbar';
 import FooterSection from '@/components/sections/FooterSection';
 import FadeContent from '@/components/effects/FadeContent';
 import JsonLd from '@/components/seo/JsonLd';
-import { serviceJsonLd } from '@/lib/schema';
+import { serviceJsonLd, HORAIRES_COURT } from '@/lib/schema';
 import { OG_IMAGES } from '@/lib/seo';
 import photoBureau from '../../../public/images/photo_bureau.jpg';
 
@@ -243,7 +243,7 @@ export default function PhobiesPage() {
                   <svg className="text-indigo-500 flex-shrink-0 mt-0.5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
                   <p className="text-indigo-800 text-sm leading-relaxed">
                     <strong>Cabinet à Boussy-Saint-Antoine</strong> — 4 Allée Les Marronniers, 91800.
-                    Lun–Sam · 9h–20h.<br />
+                    {HORAIRES_COURT}.<br />
                     <strong>Séance à distance</strong> également possible : par téléphone ou en visio sur WhatsApp.
                   </p>
                 </div>

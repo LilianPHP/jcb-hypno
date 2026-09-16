@@ -4,6 +4,7 @@ import Script from 'next/script';
 import FadeContent from '@/components/effects/FadeContent';
 import Magnet from '@/components/effects/Magnet';
 import { Phone, Mail, MapPin, Clock, Video } from 'lucide-react';
+import { HORAIRES_COURT } from '@/lib/schema';
 
 // ⚠️ Remplacer par l'URL Calendly de Jean-Charles une fois le compte créé
 const CALENDLY_URL = 'https://calendly.com/jeancharlesbernard3/seance-1h';
@@ -13,7 +14,7 @@ const contacts = [
   { icon: Mail, label: 'Email', value: 'jeancharlesbernard3@gmail.com', href: 'mailto:jeancharlesbernard3@gmail.com' },
   { icon: MapPin, label: 'Cabinet', value: '4 Allée Les Marronniers, Boussy-Saint-Antoine (91)', href: null },
   { icon: Video, label: 'À distance', value: 'Par téléphone ou en visio sur WhatsApp', href: null },
-  { icon: Clock, label: 'Horaires', value: 'Lun–Sam · 9h–20h', href: null },
+  { icon: Clock, label: 'Horaires', value: HORAIRES_COURT, href: null },
 ];
 
 export default function BookingSection() {

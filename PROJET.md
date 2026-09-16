@@ -148,7 +148,7 @@
   - Téléphone : 06 60 81 12 95
   - Email : jeancharlesbernard3@gmail.com
   - Cabinets : Boussy-Saint-Antoine (91) · Paris
-  - Horaires : Lun–Sam · 9h–20h
+  - Horaires : Lun–Ven 18h–20h · Sam 9h–20h
   - Bouton "Préférez-vous appeler ?" → `tel:+33660811295`
   - Bouton jaune "Réserver sur PagesJaunes" → https://www.pagesjaunes.fr/pros/55730097
 - Colonne droite (2/3) : widget Calendly inline
@@ -197,7 +197,7 @@ npx vercel --prod --yes
 | Email | jeancharlesbernard3@gmail.com |
 | Cabinet 1 | 4 Allée Les Marronniers, 91800 Boussy-Saint-Antoine |
 | Cabinet 2 | 4 Cité Négrier, 75007 Paris (Métro La Tour Maubourg) |
-| Horaires | Lun–Sam · 9h–20h |
+| Horaires | Lun–Ven 18h–20h · Sam 9h–20h |
 | Tarif | 80€ / 1h |
 
 ---

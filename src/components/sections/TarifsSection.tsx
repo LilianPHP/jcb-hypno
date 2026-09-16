@@ -1,6 +1,7 @@
 'use client';
 import FadeContent from '@/components/effects/FadeContent';
 import { MapPin, Video, ClipboardList, CalendarX } from 'lucide-react';
+import { HORAIRES_LONG } from '@/lib/schema';
 
 // 2 formules → grille de 2. 2 informations pratiques → grille de 2.
 // Chaque grille est complète : jamais de dernière rangée incomplète.
@@ -9,7 +10,7 @@ const formules = [
   {
     icon: MapPin,
     title: 'Séance au cabinet : 1h, 80 €',
-    desc: 'Au 4 Allée Les Marronniers, à Boussy-Saint-Antoine, du lundi au samedi de 9h à 20h.',
+    desc: `Au 4 Allée Les Marronniers, à Boussy-Saint-Antoine, ${HORAIRES_LONG}.`,
   },
   {
     icon: Video,

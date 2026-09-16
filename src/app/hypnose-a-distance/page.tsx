@@ -5,7 +5,7 @@ import Navbar from '@/components/sections/Navbar';
 import FooterSection from '@/components/sections/FooterSection';
 import FadeContent from '@/components/effects/FadeContent';
 import JsonLd from '@/components/seo/JsonLd';
-import { distanceJsonLd, SERVICES } from '@/lib/schema';
+import { distanceJsonLd, SERVICES, HORAIRES_LONG } from '@/lib/schema';
 import { OG_IMAGES } from '@/lib/seo';
 import { CERTIFICATIONS } from '@/lib/certifications';
 import portrait from '../../../public/images/jc-portrait.jpg';
@@ -416,7 +416,7 @@ export default function HypnoseADistancePage() {
                   <h3 className="font-serif text-lg font-bold text-[#1E1B4B] mb-4">Comment réserver</h3>
                   <ul className="space-y-3 text-slate-600 text-sm leading-relaxed">
                     <li className="flex gap-2.5"><span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0" /><span>En ligne, en choisissant l&apos;option « Appel téléphonique ».</span></li>
-                    <li className="flex gap-2.5"><span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0" /><span>Créneaux du lundi au samedi, de 9h à 20h (heure de Paris).</span></li>
+                    <li className="flex gap-2.5"><span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0" /><span>Créneaux {HORAIRES_LONG} (heure de Paris).</span></li>
                     <li className="flex gap-2.5"><span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0" /><span>Depuis l&apos;étranger : Jean-Charles s&apos;adapte aux décalages horaires, le créneau se fixe ensemble.</span></li>
                     <li className="flex gap-2.5"><span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0" /><span>Ou par téléphone au 06 60 81 12 95.</span></li>
                   </ul>

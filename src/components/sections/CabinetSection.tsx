@@ -1,6 +1,7 @@
 'use client';
 import FadeContent from '@/components/effects/FadeContent';
 import { MapPin, Car, TrainFront } from 'lucide-react';
+import { HORAIRES_LONG } from '@/lib/schema';
 
 // 3 blocs → grille de 3 (1 colonne sous lg, jamais de rangée incomplète).
 // Trajets relevés sur Google Maps le 2026-09-15 (voiture un mercredi à 10h,
@@ -16,7 +17,7 @@ const acces = [
     lignes: [
       '4 Allée Les Marronniers',
       '91800 Boussy-Saint-Antoine',
-      'Du lundi au samedi, de 9h à 20h',
+      `${HORAIRES_LONG.charAt(0).toUpperCase()}${HORAIRES_LONG.slice(1)}`,
     ],
   },
   {

@@ -48,12 +48,31 @@ const geo = {
   longitude: 2.5409013,
 };
 
-const horaires = {
-  '@type': 'OpeningHoursSpecification',
-  dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-  opens: '09:00',
-  closes: '20:00',
-};
+/**
+ * Horaires du cabinet, confirmés le 2026-09-16 sur la fiche Google Business
+ * Profile. Les textes affichés sur le site sont exportés ici, à côté des
+ * données structurées, pour qu'ils ne divergent plus (le site annonçait
+ * lun–sam 9h–20h, la fiche lun–ven 18h–20h).
+ */
+const horaires = [
+  {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '18:00',
+    closes: '20:00',
+  },
+  {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: 'Saturday',
+    opens: '09:00',
+    closes: '20:00',
+  },
+];
+
+/** « Lun–Ven 18h–20h · Sam 9h–20h » — pour les encarts courts. */
+export const HORAIRES_COURT = 'Lun–Ven 18h–20h · Sam 9h–20h';
+/** Version en toutes lettres, pour les phrases. */
+export const HORAIRES_LONG = 'du lundi au vendredi de 18h à 20h, et le samedi de 9h à 20h';
 
 /**
  * Le cabinet, tel que déclaré partout : entité de l'accueil et fournisseur des
