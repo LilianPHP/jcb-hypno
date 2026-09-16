@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Lora, Raleway } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
-import { GA4_MEASUREMENT_ID } from "@/lib/analytics";
+import CookieConsent from "@/components/consent/CookieConsent";
 
 const lora = Lora({
   variable: "--font-lora",
@@ -24,20 +23,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  title: "Jean-Charles Bernard — Hypnothérapeute à Boussy-Saint-Antoine (91)",
+  title: "Jean-Charles Bernard, hypnothérapeute à Boussy-Saint-Antoine",
   description:
-    "Jean-Charles Bernard, hypnothérapeute diplômé IFHE à Boussy-Saint-Antoine (91), en cabinet ou à distance. Hypnose Ericksonienne, Humaniste, RITMO®, PNL. 15 ans d'expérience. 80€/séance.",
-  keywords: [
-    "hypnothérapeute Boussy-Saint-Antoine",
-    "hypnothérapeute Essonne 91",
-    "hypnose ericksonienne Essonne",
-    "RITMO Essonne",
-    "arrêter tabac hypnose Île-de-France",
-    "hypnose enfants adolescents",
-    "hypnose en visio",
-    "séance hypnose à distance",
-    "hypnothérapeute en ligne France",
-  ],
+    "Hypnothérapeute certifié IFHE à Boussy-Saint-Antoine (91), au cabinet ou à distance : tabac, stress, sommeil, poids, phobies. Séance d'1h à 80 €.",
   openGraph: {
     title: "Jean-Charles Bernard — Hypnothérapeute",
     description:
@@ -64,23 +52,8 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-[#F8F7FF] text-[#1E1B4B]">
         {children}
 
-        {/* Google Analytics 4 — loaded after page is interactive so it
-            doesn't block first paint or LCP. */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="ga4-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            window.gtag = gtag;
-            gtag('js', new Date());
-            gtag('config', '${GA4_MEASUREMENT_ID}', {
-              anonymize_ip: true,
-            });
-          `}
-        </Script>
+        {/* Consentement puis Google Analytics 4, chargé seulement après « Accepter ». */}
+        <CookieConsent />
       </body>
     </html>
   );

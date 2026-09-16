@@ -1,10 +1,12 @@
 'use client';
-import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import { trackPhoneClick, trackExternalBookingClick } from '@/lib/analytics';
+import Link from 'next/link';
+import { Phone, Mail, MapPin } from 'lucide-react';
+import { trackPhoneClick } from '@/lib/analytics';
+import OpenConsentButton from '@/components/consent/OpenConsentButton';
 
 const links = [
   { label: 'Mon approche', href: '/#approche' },
-  { label: 'Séances & tarifs', href: '/#services' },
+  { label: 'Séances & tarifs', href: '/#tarifs' },
   { label: 'Témoignages', href: '/#temoignages' },
   { label: 'À propos', href: '/#about' },
   { label: 'Prendre RDV', href: '/#rdv' },
@@ -40,7 +42,7 @@ export default function FooterSection() {
               {[...Array(5)].map((_, i) => (
                 <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               ))}
-              <span className="text-white/50 text-xs ml-1">5,0 · 38 avis</span>
+              <span className="text-white/50 text-xs ml-1">5,0 · 39 avis</span>
             </div>
           </div>
 
@@ -82,18 +84,6 @@ export default function FooterSection() {
                   06 60 81 12 95
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://hypnose-liveyourdreams.fr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => trackExternalBookingClick('other', 'footer')}
-                  className="flex items-center gap-2 text-sm hover:text-white transition-colors"
-                >
-                  <ExternalLink size={13} className="text-indigo-400" />
-                  hypnose-liveyourdreams.fr
-                </a>
-              </li>
               <li className="flex items-start gap-2 text-sm">
                 <MapPin size={13} className="text-indigo-400 mt-0.5 flex-shrink-0" />
                 <span>4 Allée Les Marronniers<br />91800 Boussy-Saint-Antoine</span>
@@ -103,7 +93,11 @@ export default function FooterSection() {
         </div>
 
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/30">
-          <span>© {new Date().getFullYear()} Jean-Charles Bernard · Tous droits réservés</span>
+          <span className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+            <span>© {new Date().getFullYear()} Jean-Charles Bernard · Tous droits réservés</span>
+            <Link href="/mentions-legales" className="hover:text-white/60 transition-colors">Mentions légales</Link>
+            <OpenConsentButton className="hover:text-white/60 transition-colors">Gestion des cookies</OpenConsentButton>
+          </span>
           <span>
             Site web créé avec ❤️ par{' '}
             <a

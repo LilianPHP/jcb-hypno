@@ -1,8 +1,10 @@
 'use client';
+import Image from 'next/image';
 import FadeContent from '@/components/effects/FadeContent';
 import { CheckCircle2, Quote } from 'lucide-react';
 import { trackPhoneClick } from '@/lib/analytics';
 import { CERTIFICATIONS } from '@/lib/certifications';
+import photo from '../../../public/images/JC_Picure.png';
 
 export default function AboutSection() {
   return (
@@ -17,13 +19,12 @@ export default function AboutSection() {
               <div className="absolute -inset-8 bg-emerald-50 rounded-3xl rotate-2" />
               {/* Photo */}
               <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4] bg-indigo-100">
-                <img
-                  src="/images/JC_Picure.png"
-                  alt="Cabinet de Jean-Charles Bernard"
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = 'none';
-                  }}
+                <Image
+                  src={photo}
+                  alt="Jean-Charles Bernard, hypnothérapeute"
+                  fill
+                  sizes="(min-width: 448px) 448px, 100vw"
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 to-transparent" />
               </div>

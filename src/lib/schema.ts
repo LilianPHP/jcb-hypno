@@ -38,6 +38,16 @@ const coordonnees = {
   email: 'jeancharlesbernard3@gmail.com',
 };
 
+/** Fiche Google Business Profile (identifiant CID de la fiche Maps). */
+const FICHE_GOOGLE = 'https://www.google.com/maps?cid=8387584704519547257';
+
+/** Coordonnées de la fiche Google Business Profile. */
+const geo = {
+  '@type': 'GeoCoordinates',
+  latitude: 48.6979219,
+  longitude: 2.5409013,
+};
+
 const horaires = {
   '@type': 'OpeningHoursSpecification',
   dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
@@ -59,6 +69,8 @@ const cabinet = {
   ...coordonnees,
   priceRange: `${PRIX}€`,
   address: adresse,
+  geo,
+  hasMap: FICHE_GOOGLE,
   openingHoursSpecification: horaires,
 };
 
@@ -111,7 +123,13 @@ export function homeJsonLd() {
         description:
           "Jean-Charles Bernard, hypnothérapeute diplômé IFHE à Boussy-Saint-Antoine (91), en cabinet ou à distance. Hypnose ericksonienne, humaniste, RITMO®, PNL. 15 ans d'expérience.",
         founder: { '@id': PRATICIEN_ID },
-        sameAs: ['https://www.pagesjaunes.fr/pros/55730097'],
+        // Profils officiels du cabinet : aident Google à les relier au site.
+        sameAs: [
+          FICHE_GOOGLE,
+          'https://www.pagesjaunes.fr/pros/55730097',
+          'https://www.resalib.fr/praticien/21303-bernard-jean-charles-hypnotherapeute-boussy-saint-antoine',
+          'https://www.facebook.com/p/Jean-Charles-Bernard-Hypnotherapeute-100057402971685/',
+        ],
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
           name: "Accompagnements par l'hypnose",
