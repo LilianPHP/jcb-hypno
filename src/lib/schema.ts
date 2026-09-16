@@ -167,6 +167,36 @@ export function homeJsonLd() {
 }
 
 /**
+ * Page « Hypnose à distance » : un Service national, sans ancrage géographique
+ * dans son nom — la requête visée n'en a pas — mais rattaché au même cabinet.
+ */
+export function distanceJsonLd(description: string, faqs: readonly Faq[]) {
+  const url = `${SITE_URL}/hypnose-a-distance`;
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Service',
+        '@id': `${url}#service`,
+        name: 'Hypnose à distance, en visio ou par téléphone',
+        description,
+        url,
+        serviceType: 'Hypnothérapie à distance',
+        provider: cabinet,
+        areaServed: { '@type': 'Country', name: 'France' },
+        availableChannel: {
+          '@type': 'ServiceChannel',
+          serviceUrl: url,
+          availableLanguage: { '@type': 'Language', name: 'Français' },
+        },
+        offers: offre(url),
+      },
+      faqPage(`${url}#faq`, faqs),
+    ],
+  };
+}
+
+/**
  * Page de spécialité : un Service rattaché au cabinet, et la FAQ de la page. Le fournisseur reprend
  * le cabinet complet pour rester lisible seul — Google ne résout pas toujours
  * un @id d'une page à l'autre.

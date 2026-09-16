@@ -21,6 +21,7 @@ const specialites = [
   { label: 'Schémas répétitifs', href: '/schemas-repetitifs' },
   { label: 'Traumatismes', href: '/traumatismes' },
   { label: 'Enfants & adolescents', href: '/enfants-adolescents' },
+  { label: 'Hypnose à distance', href: '/hypnose-a-distance' },
 ];
 
 export default function FooterSection() {
