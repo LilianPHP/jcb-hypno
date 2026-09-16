@@ -19,7 +19,7 @@ const A_COMPLETER = {
   statut: 'Entrepreneur individuel',
   siret: '512 656 679 00044',
   mediateur: '', // médiateur de la consommation : nom et site
-  conservationGa4: '', // durée de conservation réglée dans la propriété GA4
+  conservationGa4: '2 mois', // durée réglée dans la propriété GA4 (Admin → Conservation des données)
 };
 
 function Valeur({ v }: { v: string }) {
