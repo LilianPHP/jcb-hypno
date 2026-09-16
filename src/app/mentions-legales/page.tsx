@@ -11,14 +11,17 @@ export const metadata: Metadata = {
 };
 
 /**
- * ❓ À COMPLÉTER avant mise en ligne — informations que seul Jean-Charles peut
- * fournir. Tant qu'une valeur est vide, la page l'affiche en jaune.
+ * ❓ MANQUANT — la section « Médiation de la consommation » reste à écrire : tout
+ * professionnel vendant à des particuliers doit désigner un médiateur référencé
+ * par la CECMC et afficher ses coordonnées (amende jusqu'à 3 000 €). À remettre
+ * dès que Jean-Charles a adhéré, avec nom, adresse et site du médiateur.
+ *
+ * Les valeurs ci-dessous s'affichent en jaune tant qu'elles sont vides.
  */
 const A_COMPLETER = {
   // Certificat d'inscription au répertoire SIRENE (INSEE), transmis le 16/09/2026.
   statut: 'Entrepreneur individuel',
   siret: '512 656 679 00044',
-  mediateur: '', // médiateur de la consommation : nom et site
   conservationGa4: '2 mois', // durée réglée dans la propriété GA4 (Admin → Conservation des données)
 };
 
@@ -65,12 +68,6 @@ export default function MentionsLegalesPage() {
             <h2 className={h2}>Conception du site</h2>
             <p className={p}>
               <a href="https://webmate.digital" className={lien} target="_blank" rel="noopener noreferrer">Webmate</a>
-            </p>
-
-            <h2 className={h2}>Médiation de la consommation</h2>
-            <p className={p}>
-              En cas de litige, vous pouvez recourir gratuitement au médiateur de la consommation :{' '}
-              <Valeur v={A_COMPLETER.mediateur} />.
             </p>
 
             <h2 className={h2}>Avertissement</h2>
