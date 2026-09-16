@@ -24,6 +24,7 @@ const pages: { path: string; lastModified: string; priority: number }[] = [
   { path: '/schemas-repetitifs', lastModified: '2026-09-15', priority: 0.9 },
   { path: '/traumatismes', lastModified: '2026-09-15', priority: 0.9 },
   { path: '/enfants-adolescents', lastModified: '2026-09-15', priority: 0.9 },
+  { path: '/hypnose-a-distance', lastModified: '2026-09-16', priority: 0.9 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

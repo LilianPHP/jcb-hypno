@@ -14,6 +14,7 @@ const seances = [
   { label: 'Schémas répétitifs', href: '/schemas-repetitifs', desc: 'Ce qui se répète malgré vous' },
   { label: 'Traumatismes', href: '/traumatismes', desc: 'Choc, deuil, passé douloureux' },
   { label: 'Enfants & adolescents', href: '/enfants-adolescents', desc: 'Un accompagnement adapté à leur âge' },
+  { label: 'Hypnose à distance', href: '/hypnose-a-distance', desc: 'En visio ou par téléphone, où que vous soyez' },
 ];
 
 const linksBefore = [{ label: 'Mon approche', href: '/#approche' }];
